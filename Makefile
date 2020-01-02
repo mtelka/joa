@@ -14,6 +14,7 @@ WIDTH = $(shell identify -density $(DENSITY) -format "%w" $<)
 HEIGHT = $(shell identify -density $(DENSITY) -format "%h" $<)
 MINBORDER := 2
 MINCUT := 5
+OVERCUT := 2
 CUTWIDTH := 2/10
 FONT := Bitstream-Charter-Regular
 FONTSIZE := 4
@@ -183,6 +184,7 @@ $(ALL_CARDS:=-$(DENSITY).dim): %-$(DENSITY).dim: %.pdf
 	HEXTRA=$$((($$W-$(W)*$(DENSITY)*10/254)/2)) ; \
 	VEXTRA=$$((($$H-$(H)*$(DENSITY)*10/254)/2)) ; \
 	CUTW=$$(($(DENSITY)*$(CUTWIDTH)*10/254/2)) ; \
+	OVERCUT=$$(($(DENSITY)*$(OVERCUT)*10/254)) ; \
 	HBORDER=$$(($$MINCUT-$$HEXTRA)) ; \
 	VBORDER=$$(($$MINCUT-$$VEXTRA)) ; \
 	(($$HBORDER < $$MINBORDER)) && HBORDER=$$MINBORDER ;\
@@ -193,6 +195,9 @@ $(ALL_CARDS:=-$(DENSITY).dim): %-$(DENSITY).dim: %.pdf
 		echo W=$$W ; \
 		echo H=$$H ; \
 		echo CUTW=$$CUTW ; \
+		echo OVERCUT=$$OVERCUT ; \
+		echo HEXTRA=$$HEXTRA ; \
+		echo VEXTRA=$$VEXTRA ; \
 		echo HBORDER=$$HBORDER ; \
 		echo VBORDER=$$VBORDER ; \
 		echo HCUT=$$HCUT ; \
@@ -202,6 +207,16 @@ $(ALL_CARDS:=-$(DENSITY).dim): %-$(DENSITY).dim: %.pdf
 $(ALL_CARDS:=-$(DENSITY).png): %-$(DENSITY).png: %.pdf %-$(DENSITY).dim
 	. ./$(@:.png=.dim) ; \
 	convert -density $(DENSITY) -colorspace srgb $< -bordercolor white -border $$HBORDERx$$VBORDER \
+		-fill white \
+		-draw "rectangle $$(($$HCUT-$$CUTW)),$$VBORDER $$(($$HCUT+$$CUTW)),$$(($$VBORDER+$$VEXTRA+$$OVERCUT))" \
+		-draw "rectangle $$HBORDER,$$(($$VCUT-$$CUTW)) $$(($$HBORDER+$$HEXTRA+$$OVERCUT)),$$(($$VCUT+$$CUTW))" \
+		-draw "rectangle $$(($$W+2*$$HBORDER-$$HCUT-$$CUTW)),$$VBORDER $$(($$W+2*$$HBORDER-$$HCUT+$$CUTW)),$$(($$VBORDER+$$VEXTRA+$$OVERCUT))" \
+		-draw "rectangle $$(($$W+$$HBORDER-$$HEXTRA-$$OVERCUT)),$$(($$VCUT-$$CUTW)) $$(($$W+$$HBORDER)),$$(($$VCUT+$$CUTW))" \
+		-draw "rectangle $$(($$HCUT-$$CUTW)),$$(($$H+$$VBORDER-$$VEXTRA-$$OVERCUT)) $$(($$HCUT+$$CUTW)),$$(($$H+$$VBORDER))" \
+		-draw "rectangle $$HBORDER,$$(($$H+2*$$VBORDER-$$VCUT-$$CUTW)) $$(($$HBORDER+$$HEXTRA+$$OVERCUT)),$$(($$H+2*$$VBORDER-$$VCUT+$$CUTW))" \
+		-draw "rectangle $$(($$W+2*$$HBORDER-$$HCUT-$$CUTW)),$$(($$H+$$VBORDER-$$VEXTRA-$$OVERCUT)) $$(($$W+2*$$HBORDER-$$HCUT+$$CUTW)),$$(($$H+$$VBORDER))" \
+		-draw "rectangle $$(($$W+$$HBORDER-$$HEXTRA-$$OVERCUT)),$$(($$H+2*$$VBORDER-$$VCUT-$$CUTW)) $$(($$W+$$HBORDER)),$$(($$H+2*$$VBORDER-$$VCUT+$$CUTW))" \
+		-fill black \
 		-draw "rectangle $$(($$HCUT-$$CUTW)),0 $$(($$HCUT+$$CUTW)),$$VBORDER" \
 		-draw "rectangle 0,$$(($$VCUT-$$CUTW)) $$HBORDER,$$(($$VCUT+$$CUTW))" \
 		-draw "rectangle $$(($$W+2*$$HBORDER-$$HCUT-$$CUTW)),0 $$(($$W+2*$$HBORDER-$$HCUT+$$CUTW)),$$VBORDER" \
