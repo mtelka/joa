@@ -309,7 +309,7 @@ page-%-$(DENSITY).pdf: $$(PAGEDEPS_%)
 			-rotate 90 \
 		\) \
 		-gravity East \
-		-geometry +$$((($(MINBORDER))*$(DENSITY)*10/254))+0 \
+		-geometry +$$(($(MINBORDER)*$(DENSITY)*10/254))+0 \
 		-composite \
 		$@
 
