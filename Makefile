@@ -4,8 +4,8 @@ PDFPATH := .cache
 
 DENSITY := 300
 
-VERSION := 1
-NUM_PAGES := 4
+VERSION := 2
+NUM_PAGES := 5
 
 # A4: 210 x 297 mm
 PAGEWIDTH := 210
@@ -48,6 +48,7 @@ CHARACTERS := \
 	John_Stewart_of_Darnley-2 \
 	Mehmed_II-1 \
 	Mehmed_II-2 \
+	The_Great_Reaper \
 	Vlad_Tepes-1 \
 	Vlad_Tepes-2
 
@@ -84,6 +85,9 @@ CHARACTER_PDF_2_NOTE := 'KS 1.0 Update \#208'
 CHARACTER_PDF_3 := Updated\ Scottish\ Profiles\ -\ ENG.pdf
 CHARACTER_PDF_3_DATE := 2019-11-13
 CHARACTER_PDF_3_NOTE := 'KS 1.0 Update \#210'
+CHARACTER_PDF_4 := JoA\ -\ Revised\ Profiles\ -\ Reliquary\ Characters\ -\ Front\ -\ ENG.pdf
+CHARACTER_PDF_4_DATE := 2020-01-30
+CHARACTER_PDF_4_NOTE := 'KS 1.0 Update \#224'
 
 INTRIGUE_PDF_1 := Core\ Box\ (ENG)\ -\ The\ Battle\ of\ Patay\ -\ Intrigue\ Card.pdf
 INTRIGUE_PDF_1_DATE := 2019-07-17
@@ -141,6 +145,10 @@ Mehmed_II-1_BOX := $(BOX_RELIQUARY)
 Mehmed_II-2_PDF := CHARACTER_PDF_2
 Mehmed_II-2_PAGE := 2
 Mehmed_II-2_BOX := $(BOX_RELIQUARY)
+
+The_Great_Reaper_PDF := CHARACTER_PDF_4
+The_Great_Reaper_PAGE := 1
+The_Great_Reaper_BOX := $(BOX_RELIQUARY)
 
 Vlad_Tepes-1_PDF := CHARACTER_PDF_1
 Vlad_Tepes-1_PAGE := 1
@@ -289,6 +297,15 @@ define PAGEFMT_4 :=
 \( \
 	\( John_Stewart_of_Buchan-1-$(DENSITY).png John_Stewart_of_Buchan-2-$(DENSITY).png +append \) \
 	\( John_Stewart_of_Darnley-1-$(DENSITY).png John_Stewart_of_Darnley-2-$(DENSITY).png +append \) \
+	-append \
+\)
+endef
+
+PAGEDEPS_5 := The_Great_Reaper
+define PAGEFMT_5 :=
+\( \
+	\( The_Great_Reaper-$(DENSITY).png \( -clone -1 -fx 1 \) +append \) \
+	\( -clone -1 -fx 1 \) \
 	-append \
 \)
 endef
