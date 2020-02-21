@@ -5,7 +5,7 @@ PDFPATH := .cache
 DENSITY := 300
 
 VERSION := 2
-NUM_PAGES := 5
+NUM_PAGES := 6
 
 # A4: 210 x 297 mm
 PAGEWIDTH := 210
@@ -32,11 +32,17 @@ BOX_BATTLES	:= 'Legendary Battles'
 BOX_VILLAGE	:= 'Village Pack'
 
 TROOPS := \
+	Bonesetter \
+	Bowmen \
+	Citizen \
 	Executioner \
+	Ghosts \
 	Jannisaries \
 	Merchant_Girl \
 	Mounted_Bowmen \
-	Peasants
+	Peasants \
+	Priest \
+	Provincial_Militia
 
 # 63 x 88 mm
 $(TROOPS):	W := 63
@@ -99,9 +105,27 @@ INTRIGUE_PDF_2_NOTE := 'KS 1.0 Update \#208'
 
 # Troops
 
+Bonesetter_PDF := TROOP_PDF_1
+Bonesetter_PAGE := 30
+Bonesetter_BOX := $(BOX_CORE)
+
+Bowmen_PDF := TROOP_PDF_1
+Bowmen_PAGE := 16
+Bowmen_BOX := ''
+Bowmen:		Bowmen-C Bowmen-B
+
+Citizen_PDF := TROOP_PDF_1
+Citizen_PAGE := 29
+Citizen_BOX := ''
+Citizen:	Citizen-C Citizen-V
+
 Executioner_PDF := TROOP_PDF_2
 Executioner_PAGE := 30
 Executioner_BOX := $(BOX_RELIQUARY)
+
+Ghosts_PDF := TROOP_PDF_1
+Ghosts_PAGE := 23
+Ghosts_BOX := $(BOX_CORE)
 
 Jannisaries_PDF := TROOP_PDF_2
 Jannisaries_PAGE := 37
@@ -110,7 +134,7 @@ Jannisaries_BOX := $(BOX_RELIQUARY)
 Merchant_Girl_PDF := TROOP_PDF_1
 Merchant_Girl_PAGE := 28
 Merchant_Girl_BOX := ''
-Merchant_Girl:		Merchant_Girl-C Merchant_Girl-V
+Merchant_Girl:	Merchant_Girl-C Merchant_Girl-V
 
 Mounted_Bowmen_PDF := TROOP_PDF_1
 Mounted_Bowmen_PAGE := 17
@@ -120,6 +144,14 @@ Peasants_PDF := TROOP_PDF_1
 Peasants_PAGE := 19
 Peasants_BOX := ''
 Peasants:	Peasants-C Peasants-B
+
+Priest_PDF := TROOP_PDF_1
+Priest_PAGE := 25
+Priest_BOX := $(BOX_CORE)
+
+Provincial_Militia_PDF := TROOP_PDF_1
+Provincial_Militia_PAGE := 10
+Provincial_Militia_BOX := $(BOX_CORE)
 
 # Characters
 
@@ -333,6 +365,15 @@ define PAGEFMT_5 :=
 	\( The_Great_Reaper-$(DENSITY).png \( -clone -1 -fx 1 \) +append \) \
 	\( -clone -1 -fx 1 \) \
 	-append \
+\)
+endef
+
+PAGEDEPS_6 := Provincial_Militia Bowmen Ghosts Priest Citizen Bonesetter
+define PAGEFMT_6 :=
+\( \
+	\( Provincial_Militia-$(DENSITY).png \( +clone \) Bowmen-C-$(DENSITY).png \( +clone \) -rotate 90 -append \) \
+	\( Ghosts-$(DENSITY).png Priest-$(DENSITY).png Citizen-C-$(DENSITY).png Bonesetter-$(DENSITY).png -rotate 90 -append \) \
+	+append \
 \)
 endef
 
