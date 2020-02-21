@@ -13,6 +13,7 @@ PAGEHEIGHT := 297
 WIDTH = $(shell identify -density $(DENSITY) -format "%w" $<)
 HEIGHT = $(shell identify -density $(DENSITY) -format "%h" $<)
 MINBORDER := 2
+MAXEXTRA := 3
 MINCUT := 5
 OVERCUT := 2
 CUTWIDTH := 2/10
@@ -20,8 +21,8 @@ FONT := Bitstream-Charter-Regular
 FONTSIZE := 4
 BOX := ''
 ANNOTATE_SPACE := 2
-ANNOTATE_BOX = $$(($$HCUT+$(DENSITY)*$(ANNOTATE_SPACE)*10/254)),$$(($$VBORDER-$(DENSITY)*$(MINBORDER)*10/254))
-ANNOTATE_DATE = $$(($$HCUT+$(DENSITY)*$(ANNOTATE_SPACE)*10/254)),$$(($$VBORDER-$(MINBORDER)*$(DENSITY)*10/254))
+ANNOTATE_BOX = $$(($$HCUT+$(DENSITY)*$(ANNOTATE_SPACE)*10/254)),0
+ANNOTATE_DATE = $$(($$HCUT+$(DENSITY)*$(ANNOTATE_SPACE)*10/254)),0
 ANNOTATE_PDF = $$(($$VCUT+$(DENSITY)*$(ANNOTATE_SPACE)*10/254)),0
 ANNOTATE_NOTE = $$(($$VCUT+$(DENSITY)*$(ANNOTATE_SPACE)*10/254)),0
 
@@ -189,8 +190,17 @@ $(ALL_CARDS:=-$(DENSITY).dim): %-$(DENSITY).dim: %.pdf
 	H=$(HEIGHT) ; \
 	MINBORDER=$$(($(MINBORDER)*$(DENSITY)*10/254)) ; \
 	MINCUT=$$(($(MINCUT)*$(DENSITY)*10/254)) ; \
+	MAXEXTRA=$$(($(MAXEXTRA)*$(DENSITY)*10/254)) ; \
 	HEXTRA=$$((($$W-$(W)*$(DENSITY)*10/254)/2)) ; \
 	VEXTRA=$$((($$H-$(H)*$(DENSITY)*10/254)/2)) ; \
+	HCROP=0 ; \
+	VCROP=0 ; \
+	((HEXTRA > MAXEXTRA)) && HCROP=$$((HEXTRA-MAXEXTRA)) ; \
+	((VEXTRA > MAXEXTRA)) && VCROP=$$((VEXTRA-MAXEXTRA)) ; \
+	W=$$((W-2*HCROP)) ; \
+	H=$$((H-2*VCROP)) ; \
+	HEXTRA=$$((HEXTRA-HCROP)) ; \
+	VEXTRA=$$((VEXTRA-HCROP)) ; \
 	CUTW=$$(($(DENSITY)*$(CUTWIDTH)*10/254/2)) ; \
 	OVERCUT=$$(($(DENSITY)*$(OVERCUT)*10/254)) ; \
 	HBORDER=$$(($$MINCUT-$$HEXTRA)) ; \
@@ -204,6 +214,8 @@ $(ALL_CARDS:=-$(DENSITY).dim): %-$(DENSITY).dim: %.pdf
 		echo H=$$H ; \
 		echo CUTW=$$CUTW ; \
 		echo OVERCUT=$$OVERCUT ; \
+		echo HCROP=$$HCROP ; \
+		echo VCROP=$$VCROP ; \
 		echo HEXTRA=$$HEXTRA ; \
 		echo VEXTRA=$$VEXTRA ; \
 		echo HBORDER=$$HBORDER ; \
@@ -214,7 +226,9 @@ $(ALL_CARDS:=-$(DENSITY).dim): %-$(DENSITY).dim: %.pdf
 
 $(ALL_CARDS:=-$(DENSITY).png): %-$(DENSITY).png: %.pdf %-$(DENSITY).dim
 	. ./$(@:.png=.dim) ; \
-	convert -density $(DENSITY) -colorspace srgb $< -bordercolor white -border $$HBORDERx$$VBORDER \
+	convert -density $(DENSITY) -colorspace srgb $< \
+		-crop $$((W))x$$((H))+$$((HCROP))+$$((VCROP)) +repage \
+		-bordercolor white -border $$((HBORDER))x$$((VBORDER)) \
 		-fill white \
 		-draw "rectangle $$(($$HCUT-$$CUTW)),$$VBORDER $$(($$HCUT+$$CUTW)),$$(($$VBORDER+$$VEXTRA+$$OVERCUT))" \
 		-draw "rectangle $$HBORDER,$$(($$VCUT-$$CUTW)) $$(($$HBORDER+$$HEXTRA+$$OVERCUT)),$$(($$VCUT+$$CUTW))" \
@@ -234,8 +248,11 @@ $(ALL_CARDS:=-$(DENSITY).png): %-$(DENSITY).png: %.pdf %-$(DENSITY).dim
 		-draw "rectangle $$(($$W+2*$$HBORDER-$$HCUT-$$CUTW)),$$(($$H+$$VBORDER)) $$(($$W+2*$$HBORDER-$$HCUT+$$CUTW)),$$(($$H+2*$$VBORDER))" \
 		-draw "rectangle $$(($$W+$$HBORDER)),$$(($$H+2*$$VBORDER-$$VCUT-$$CUTW)) $$(($$W+2*$$HBORDER)),$$(($$H+2*$$VBORDER-$$VCUT+$$CUTW))" \
 		-font $(FONT) -pointsize $(FONTSIZE) \
-		-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $($(@:-$(DENSITY).png=)_BOX)" \
-		-draw "gravity NorthEast ; text $(ANNOTATE_DATE) '$($($(@:-$(DENSITY).png=)_PDF)_DATE)'" \
+		\( \
+			-size $$(($$W+2*$$HBORDER))x$$(($(DENSITY)*$(MINBORDER)*10/254)) xc:none \
+			-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $($(@:-$(DENSITY).png=)_BOX)" \
+			-draw "gravity NorthEast ; text $(ANNOTATE_DATE) '$($($(@:-$(DENSITY).png=)_PDF)_DATE)'" \
+		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
 		\( \
 			-size $$(($$H+2*$$VBORDER))x$$(($(DENSITY)*$(MINBORDER)*10/254)) xc:none \
 			-draw "gravity NorthWest ; text $(ANNOTATE_PDF) '$(subst \,,$($($(@:-$(DENSITY).png=)_PDF)))'" \
@@ -248,21 +265,30 @@ $(ALL_CARDS:=-$(DENSITY).png): %-$(DENSITY).png: %.pdf %-$(DENSITY).dim
 	. ./$(@:-C-$(DENSITY).png=-$(DENSITY).dim) ; \
 	convert -density $(DENSITY) $< \
 		-font $(FONT) -pointsize $(FONTSIZE) \
-		-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $(BOX_CORE)" \
+		\( \
+			-size $$(($$W+2*$$HBORDER))x$$(($(DENSITY)*$(MINBORDER)*10/254)) xc:none \
+			-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $(BOX_CORE)" \
+		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
 		$@
 
 %-B-$(DENSITY).png: %-$(DENSITY).png %-$(DENSITY).dim
 	. ./$(@:-B-$(DENSITY).png=-$(DENSITY).dim) ; \
 	convert -density $(DENSITY) $< \
 		-font $(FONT) -pointsize $(FONTSIZE) \
-		-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $(BOX_BATTLES)" \
+		\( \
+			-size $$(($$W+2*$$HBORDER))x$$(($(DENSITY)*$(MINBORDER)*10/254)) xc:none \
+			-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $(BOX_BATTLES)" \
+		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
 		$@
 
 %-V-$(DENSITY).png: %-$(DENSITY).png %-$(DENSITY).dim
 	. ./$(@:-V-$(DENSITY).png=-$(DENSITY).dim) ; \
 	convert -density $(DENSITY) $< \
 		-font $(FONT) -pointsize $(FONTSIZE) \
-		-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $(BOX_VILLAGE)" \
+		\( \
+			-size $$(($$W+2*$$HBORDER))x$$(($(DENSITY)*$(MINBORDER)*10/254)) xc:none \
+			-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $(BOX_VILLAGE)" \
+		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
 		$@
 
 PAGEDEPS_1 := Patay-French Executioner Jannisaries Targoviste-Mehmed Targoviste-Tepes
