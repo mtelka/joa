@@ -70,25 +70,25 @@ $(INTRIGUE):	H := 120
 all: Joan_of_Arc_-_Updated_Cards_-_v$(VERSION)-$(DENSITY)dpi.pdf
 
 
-TROOP_PDF_1 := JoA\ -\ CORE\ -\ Revised\ Troops\ &\ Civilians\ -\ ENG.pdf
-TROOP_PDF_1_DATE := 2019-10-30
-TROOP_PDF_1_NOTE := 'KS 1.0 Update \#208'
-TROOP_PDF_2 := JoA\ -\ Reliquary\ -\ Revised\ Troops\ &\ Civilians\ -\ ENG.pdf
-TROOP_PDF_2_DATE := 2019-10-30
-TROOP_PDF_2_NOTE := 'KS 1.0 Update \#208'
+TROOP_PDF_1 := JoA\ -\ CORE\ -\ TROOP\ -\ ENG\ -\ FINAL_1.5.pdf
+TROOP_PDF_1_DATE := 2020-02-17
+TROOP_PDF_1_NOTE := 'KS 1.0 Update \#227'
+TROOP_PDF_2 := JoA\ -\ Reliquary\ -\ Poker\ Cards\ -\ Troops\ -\ Front\ -\ ENG_1.5.pdf
+TROOP_PDF_2_DATE := 2020-02-17
+TROOP_PDF_2_NOTE := 'KS 1.0 Update \#227'
 
-CHARACTER_PDF_1 := JoA\ -\ RELIQUARY\ -\ Revised\ Character\ Cards\ -\ Front\ -\ ENG.pdf
-CHARACTER_PDF_1_DATE := 2019-10-30
-CHARACTER_PDF_1_NOTE := 'KS 1.0 Update \#208'
-CHARACTER_PDF_2 := JoA\ -\ RELIQUARY\ -\ Revised\ Character\ Cards\ -\ Back\ -\ ENG.pdf
-CHARACTER_PDF_2_DATE := 2019-10-30
-CHARACTER_PDF_2_NOTE := 'KS 1.0 Update \#208'
-CHARACTER_PDF_3 := Updated\ Scottish\ Profiles\ -\ ENG.pdf
-CHARACTER_PDF_3_DATE := 2019-11-13
-CHARACTER_PDF_3_NOTE := 'KS 1.0 Update \#210'
-CHARACTER_PDF_4 := JoA\ -\ Revised\ Profiles\ -\ Reliquary\ Characters\ -\ Front\ -\ ENG.pdf
-CHARACTER_PDF_4_DATE := 2020-01-30
-CHARACTER_PDF_4_NOTE := 'KS 1.0 Update \#224'
+CHARACTER_PDF_1 := JoA\ -\ CORE\ -\ Tarot\ Cards_Characters\ -\ FRONT\ -\ ENG_1.5.pdf
+CHARACTER_PDF_1_DATE := 2020-02-17
+CHARACTER_PDF_1_NOTE := 'KS 1.0 Update \#227'
+CHARACTER_PDF_2 := JoA\ -\ CORE\ -\ Tarot\ Cards_Characters\ -\ Back\ -\ ENG_1.5.pdf
+CHARACTER_PDF_2_DATE := 2020-02-17
+CHARACTER_PDF_2_NOTE := 'KS 1.0 Update \#227'
+CHARACTER_PDF_3 := JoA\ -\ RELIQUARY\ -\ TAROT\ Cards\ -\ Characters\ -\ Front\ -\ ENG_1.5.pdf
+CHARACTER_PDF_3_DATE := 2020-02-17
+CHARACTER_PDF_3_NOTE := 'KS 1.0 Update \#227'
+CHARACTER_PDF_4 := JoA\ -\ RELIQUARY\ -\ TAROT\ Cards\ -\ Characters\ -\ Back\ -\ ENG_1.5.pdf
+CHARACTER_PDF_4_DATE := 2020-02-17
+CHARACTER_PDF_4_NOTE := 'KS 1.0 Update \#227'
 
 INTRIGUE_PDF_1 := Core\ Box\ (ENG)\ -\ The\ Battle\ of\ Patay\ -\ Intrigue\ Card.pdf
 INTRIGUE_PDF_1_DATE := 2019-07-17
@@ -100,63 +100,63 @@ INTRIGUE_PDF_2_NOTE := 'KS 1.0 Update \#208'
 # Troops
 
 Executioner_PDF := TROOP_PDF_2
-Executioner_PAGE := 1
+Executioner_PAGE := 30
 Executioner_BOX := $(BOX_RELIQUARY)
 
 Jannisaries_PDF := TROOP_PDF_2
-Jannisaries_PAGE := 2
+Jannisaries_PAGE := 37
 Jannisaries_BOX := $(BOX_RELIQUARY)
 
 Merchant_Girl_PDF := TROOP_PDF_1
-Merchant_Girl_PAGE := 3
+Merchant_Girl_PAGE := 28
 Merchant_Girl_BOX := ''
 Merchant_Girl:		Merchant_Girl-C Merchant_Girl-V
 
 Mounted_Bowmen_PDF := TROOP_PDF_1
-Mounted_Bowmen_PAGE := 1
+Mounted_Bowmen_PAGE := 17
 Mounted_Bowmen_BOX := $(BOX_CORE)
 
 Peasants_PDF := TROOP_PDF_1
-Peasants_PAGE := 2
+Peasants_PAGE := 19
 Peasants_BOX := ''
 Peasants:	Peasants-C Peasants-B
 
 # Characters
 
-John_Stewart_of_Buchan-1_PDF := CHARACTER_PDF_3
-John_Stewart_of_Buchan-1_PAGE := 3
+John_Stewart_of_Buchan-1_PDF := CHARACTER_PDF_1
+John_Stewart_of_Buchan-1_PAGE := 54
 John_Stewart_of_Buchan-1_BOX := $(BOX_CORE)
 
-John_Stewart_of_Buchan-2_PDF := CHARACTER_PDF_3
-John_Stewart_of_Buchan-2_PAGE := 4
+John_Stewart_of_Buchan-2_PDF := CHARACTER_PDF_2
+John_Stewart_of_Buchan-2_PAGE := 54
 John_Stewart_of_Buchan-2_BOX := $(BOX_CORE)
 
 John_Stewart_of_Darnley-1_PDF := CHARACTER_PDF_3
-John_Stewart_of_Darnley-1_PAGE := 1
+John_Stewart_of_Darnley-1_PAGE := 10
 John_Stewart_of_Darnley-1_BOX := $(BOX_RELIQUARY)
 
-John_Stewart_of_Darnley-2_PDF := CHARACTER_PDF_3
-John_Stewart_of_Darnley-2_PAGE := 2
+John_Stewart_of_Darnley-2_PDF := CHARACTER_PDF_4
+John_Stewart_of_Darnley-2_PAGE := 10
 John_Stewart_of_Darnley-2_BOX := $(BOX_RELIQUARY)
 
-Mehmed_II-1_PDF := CHARACTER_PDF_1
-Mehmed_II-1_PAGE := 2
+Mehmed_II-1_PDF := CHARACTER_PDF_3
+Mehmed_II-1_PAGE := 18
 Mehmed_II-1_BOX := $(BOX_RELIQUARY)
 
-Mehmed_II-2_PDF := CHARACTER_PDF_2
-Mehmed_II-2_PAGE := 2
+Mehmed_II-2_PDF := CHARACTER_PDF_4
+Mehmed_II-2_PAGE := 18
 Mehmed_II-2_BOX := $(BOX_RELIQUARY)
 
-The_Great_Reaper_PDF := CHARACTER_PDF_4
-The_Great_Reaper_PAGE := 1
+The_Great_Reaper_PDF := CHARACTER_PDF_3
+The_Great_Reaper_PAGE := 20
 The_Great_Reaper_BOX := $(BOX_RELIQUARY)
 
-Vlad_Tepes-1_PDF := CHARACTER_PDF_1
-Vlad_Tepes-1_PAGE := 1
+Vlad_Tepes-1_PDF := CHARACTER_PDF_3
+Vlad_Tepes-1_PAGE := 15
 Vlad_Tepes-1_BOX := $(BOX_RELIQUARY)
 
-Vlad_Tepes-2_PDF := CHARACTER_PDF_2
-Vlad_Tepes-2_PAGE := 1
+Vlad_Tepes-2_PDF := CHARACTER_PDF_4
+Vlad_Tepes-2_PAGE := 15
 Vlad_Tepes-2_BOX := $(BOX_RELIQUARY)
 
 # Intrigue
