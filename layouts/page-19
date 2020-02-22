@@ -1,7 +1,7 @@
-PAGEDEPS_19 := Philippe_the_Bold The_Werewolf-1 The_Witch-1 The_Witch-2
+PAGEDEPS_19 := Philippe_the_Bold Baudoin_de_Lens The_Witch-1 The_Witch-2
 define PAGEFMT_19 :=
 \( \
-	\( Philippe_the_Bold-$(DENSITY).png The_Werewolf-1-$(DENSITY).png +append \) \
+	\( Philippe_the_Bold-$(DENSITY).png Baudoin_de_Lens-$(DENSITY).png +append \) \
 	\( The_Witch-1-$(DENSITY).png The_Witch-2-$(DENSITY).png +append \) \
 	-append \
 \)

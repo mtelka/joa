@@ -1,8 +1,8 @@
-PAGEDEPS_26 := John_II_of_Luxembourg-2 William_Wallace-1 William_Wallace-2H William_Wallace-2U
+PAGEDEPS_26 := John_II_of_Luxembourg-2 William_Wallace-1 Radu_III_The_Handsome-2 The_Griffin
 define PAGEFMT_26 :=
 \( \
 	\( John_II_of_Luxembourg-2-$(DENSITY).png William_Wallace-1-$(DENSITY).png +append \) \
-	\( William_Wallace-2H-$(DENSITY).png William_Wallace-2U-$(DENSITY).png +append \) \
+	\( Radu_III_The_Handsome-2-$(DENSITY).png The_Griffin-$(DENSITY).png +append \) \
 	-append \
 \)
 endef

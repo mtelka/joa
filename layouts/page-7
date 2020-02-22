@@ -1,7 +1,7 @@
-PAGEDEPS_7 := John_Fastolf-2H John_Fastolf-2U John_Chandos-1 John_of_Lancaster-2U
+PAGEDEPS_7 := Arthur_de_Richemont-1 John_Fastolf-2H John_Fastolf-2U John_Chandos-1 John_of_Lancaster-2U
 define PAGEFMT_7 :=
 \( \
-	\( John_Fastolf-2H-$(DENSITY).png John_Fastolf-2U-$(DENSITY).png +append \) \
+	\( Arthur_de_Richemont-1-$(DENSITY).png John_Fastolf-2U-$(DENSITY).png +append \) \
 	\( John_Chandos-1-$(DENSITY).png John_of_Lancaster-2U-$(DENSITY).png +append \) \
 	-append \
 \)

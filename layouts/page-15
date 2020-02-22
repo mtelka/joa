@@ -1,7 +1,7 @@
-PAGEDEPS_15 := La_Hire-2H La_Hire-2U Poton_de_Xaintrailles-1 Poton_de_Xaintrailles-2H
+PAGEDEPS_15 := La_Hire-2H Gilles_de_Rais-1 Poton_de_Xaintrailles-1 Poton_de_Xaintrailles-2H
 define PAGEFMT_15 :=
 \( \
-	\( La_Hire-2H-$(DENSITY).png La_Hire-2U-$(DENSITY).png +append \) \
+	\( La_Hire-2H-$(DENSITY).png Gilles_de_Rais-1-$(DENSITY).png +append \) \
 	\( Poton_de_Xaintrailles-1-$(DENSITY).png Poton_de_Xaintrailles-2H-$(DENSITY).png +append \) \
 	-append \
 \)

@@ -1,8 +1,8 @@
-PAGEDEPS_5 := Radu_III_The_Handsome-2 The_Griffin Assassin
+PAGEDEPS_5 := Assassin William_Wallace-2H William_Wallace-2U
 define PAGEFMT_5 :=
 \( \
-	\( Radu_III_The_Handsome-2-$(DENSITY).png The_Griffin-$(DENSITY).png +append \) \
 	\( Assassin-$(DENSITY).png \( +clone \) +append \) \
+	\( William_Wallace-2H-$(DENSITY).png William_Wallace-2U-$(DENSITY).png +append \) \
 	-append \
 \)
 endef

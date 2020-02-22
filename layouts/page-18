@@ -1,7 +1,7 @@
-PAGEDEPS_18 := Boucicaut-2 Amaury_de_Craon-1 Erwan_de_Romorantin-1 Erwan_de_Romorantin-2
+PAGEDEPS_18 := Boucicaut-2 Gilles_de_Rais-2H Erwan_de_Romorantin-1 Erwan_de_Romorantin-2
 define PAGEFMT_18 :=
 \( \
-	\( Boucicaut-2-$(DENSITY).png Amaury_de_Craon-1-$(DENSITY).png +append \) \
+	\( Boucicaut-2-$(DENSITY).png Gilles_de_Rais-2H-$(DENSITY).png +append \) \
 	\( Erwan_de_Romorantin-1-$(DENSITY).png Erwan_de_Romorantin-2-$(DENSITY).png +append \) \
 	-append \
 \)

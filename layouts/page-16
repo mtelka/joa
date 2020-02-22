@@ -1,7 +1,7 @@
-PAGEDEPS_16 := Poton_de_Xaintrailles-2U Philippe_VI_de_Valois-1 Philippe_VI_de_Valois-2H Philippe_VI_de_Valois-2U
+PAGEDEPS_16 := Poton_de_Xaintrailles-2U Thomas_de_Scales-2 Philippe_VI_de_Valois-2H Philippe_VI_de_Valois-2U
 define PAGEFMT_16 :=
 \( \
-	\( Poton_de_Xaintrailles-2U-$(DENSITY).png Philippe_VI_de_Valois-1-$(DENSITY).png +append \) \
+	\( Poton_de_Xaintrailles-2U-$(DENSITY).png Thomas_de_Scales-2-$(DENSITY).png +append \) \
 	\( Philippe_VI_de_Valois-2H-$(DENSITY).png Philippe_VI_de_Valois-2U-$(DENSITY).png +append \) \
 	-append \
 \)

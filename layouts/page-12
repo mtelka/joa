@@ -1,8 +1,8 @@
-PAGEDEPS_12 := Charles_de_Bourbon-2 Bertrand_du_Guesclin-2H Gilles_de_Rais-1 Gilles_de_Rais-2H
+PAGEDEPS_12 := Robert_Knolles Captal_de_Buch-2 La_Hire-2U Edward_III-2
 define PAGEFMT_12 :=
 \( \
-	\( Charles_de_Bourbon-2-$(DENSITY).png Bertrand_du_Guesclin-2H-$(DENSITY).png +append \) \
-	\( Gilles_de_Rais-1-$(DENSITY).png Gilles_de_Rais-2H-$(DENSITY).png +append \) \
+	\( Robert_Knolles-$(DENSITY).png Captal_de_Buch-2-$(DENSITY).png +append \) \
+	\( La_Hire-2U-$(DENSITY).png Edward_III-2-$(DENSITY).png +append \) \
 	-append \
 \)
 endef
