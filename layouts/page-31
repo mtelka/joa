@@ -3,6 +3,7 @@ define PAGEFMT_31 :=
 \( \
 	\( Citizen-V-$(DENSITY).png Apothecary-V-$(DENSITY).png \( +clone -fx 1 \) \( +clone -fx 1 \) -rotate 90 -append \) \
 	\( +clone -fx 1 \) \
+	+swap \
 	+append \
 \)
 endef

@@ -3,6 +3,7 @@ define PAGEFMT_30 :=
 \( \
 	\( Bowmen-B-$(DENSITY).png \( +clone \) Peasants-B-$(DENSITY).png \( +clone \) -rotate 90 -append \) \
 	\( +clone -fx 1 \) \
+	+swap \
 	+append \
 \)
 endef

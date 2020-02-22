@@ -3,6 +3,7 @@ define PAGEFMT_22 :=
 \( \
 	\( French_Mounted_Knights-$(DENSITY).png Impetuous_Knights-$(DENSITY).png Scottish_Pikemen-$(DENSITY).png Flemish_Pikemen-$(DENSITY).png -rotate 90 -append \) \
 	\( Voulgiers-$(DENSITY).png Guisamiers-$(DENSITY).png Genoese_Crossbowmen-$(DENSITY).png Entrenched_Genoese_Crossbowmen-$(DENSITY).png -rotate 90 -append \) \
+	+swap \
 	+append \
 \)
 endef
