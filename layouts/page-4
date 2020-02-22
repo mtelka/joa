@@ -1,8 +1,6 @@
-PAGEDEPS_4 := John_Stewart_of_Darnley-1 John_Stewart_of_Darnley-2
+PAGEDEPS_4 :=
 define PAGEFMT_4 :=
 \( \
-	\( John_Stewart_of_Darnley-1-$(DENSITY).png John_Stewart_of_Darnley-2-$(DENSITY).png +append \) \
-	\( +clone -fx 1 \) +swap \
-	-append \
+	-size 1x1 xc:none \
 \)
 endef

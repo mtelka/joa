@@ -1,8 +1,8 @@
-PAGEDEPS_2 := Merchant_Girl Mounted_Bowmen
+PAGEDEPS_2 := Merchant_Girl Mounted_Bowmen Vlad_Tepes-1 The_Great_Reaper
 define PAGEFMT_2 :=
 \( \
-	\( Merchant_Girl-C-$(DENSITY).png Merchant_Girl-V-$(DENSITY).png Mounted_Bowmen-$(DENSITY).png Mounted_Bowmen-$(DENSITY).png -rotate 90 -append \) \
-	\( +clone -fx 1 \) \
+	\( Merchant_Girl-C-$(DENSITY).png Merchant_Girl-V-$(DENSITY).png Mounted_Bowmen-$(DENSITY).png \( +clone \) -rotate 90 -append \) \
+	\( Vlad_Tepes-1-$(DENSITY).png The_Great_Reaper-$(DENSITY).png -append \) \
 	+append \
 \)
 endef

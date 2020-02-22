@@ -1,8 +1,6 @@
-PAGEDEPS_5 := The_Great_Reaper
+PAGEDEPS_5 :=
 define PAGEFMT_5 :=
 \( \
-	\( The_Great_Reaper-$(DENSITY).png \( -clone -1 -fx 1 \) +append \) \
-	\( -clone -1 -fx 1 \) \
-	-append \
+	-size 1x1 xc:none \
 \)
 endef
