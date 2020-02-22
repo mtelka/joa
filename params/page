@@ -1,4 +1,4 @@
-VERSION := 2
+VERSION := 3
 NUM_PAGES := 28
 
 # A4: 210 x 297 mm
