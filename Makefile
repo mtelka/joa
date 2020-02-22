@@ -24,20 +24,43 @@ ANNOTATE_NOTE = $$(($$VCUT+$(DENSITY)*$(ANNOTATE_SPACE)*10/254)),0
 BOX_CORE	:= 'Core Box'
 BOX_RELIQUARY	:= 'Reliquary'
 BOX_BATTLES	:= 'Legendary Battles'
+BOX_SIEGE	:= 'Siege'
+BOX_SIEGE_EQ	:= 'Siege Equipment'
 BOX_VILLAGE	:= 'Village Pack'
 
 TROOPS := \
+	Apothecary \
+	Azab_Archers \
 	Bonesetter \
 	Bowmen \
+	Bowmen_-_Short_Bow \
 	Citizen \
+	Culverin \
+	Entrenched_Genoese_Crossbowmen \
 	Executioner \
+	Flagellants \
+	Flemish_Pikemen \
+	French_Mounted_Knights \
+	Genoese_Crossbowmen \
 	Ghosts \
+	Guisamiers \
+	Heretics \
+	Hunting_Dogs \
+	Impetuous_Knights \
 	Jannisaries \
 	Merchant_Girl \
 	Mounted_Bowmen \
+	Musician \
+	Peasant_Militia \
 	Peasants \
+	Penitents \
+	Plague_Bearers \
 	Priest \
-	Provincial_Militia
+	Provincial_Militia \
+	Scottish_Pikemen \
+	Support_Infantry \
+	Voracious_Demons \
+	Voulgiers
 
 # 63 x 88 mm
 $(TROOPS):	W := 63
@@ -131,6 +154,15 @@ INTRIGUE_PDF_2_NOTE := 'KS 1.0 Update \#208'
 
 # Troops
 
+Apothecary_PDF := TROOP_PDF_2
+Apothecary_PAGE := 33
+Apothecary_BOX := ''
+Apothecary:	Apothecary-R Apothecary-V
+
+Azab_Archers_PDF := TROOP_PDF_2
+Azab_Archers_PAGE := 42
+Azab_Archers_BOX := $(BOX_RELIQUARY)
+
 Bonesetter_PDF := TROOP_PDF_1
 Bonesetter_PAGE := 30
 Bonesetter_BOX := $(BOX_CORE)
@@ -140,18 +172,63 @@ Bowmen_PAGE := 16
 Bowmen_BOX := ''
 Bowmen:		Bowmen-C Bowmen-B
 
+Bowmen_-_Short_Bow_PDF := TROOP_PDF_2
+Bowmen_-_Short_Bow_PAGE := 15
+Bowmen_-_Short_Bow_BOX := $(BOX_RELIQUARY)
+
 Citizen_PDF := TROOP_PDF_1
 Citizen_PAGE := 29
 Citizen_BOX := ''
 Citizen:	Citizen-C Citizen-V
 
+Culverin_PDF := TROOP_PDF_2
+Culverin_PAGE := 34
+Culverin_BOX := ''
+Culverin:	Culverin-R Culverin-S Culverin-SE
+
+Entrenched_Genoese_Crossbowmen_PDF := TROOP_PDF_2
+Entrenched_Genoese_Crossbowmen_PAGE := 12
+Entrenched_Genoese_Crossbowmen_BOX := $(BOX_RELIQUARY)
+
 Executioner_PDF := TROOP_PDF_2
 Executioner_PAGE := 30
 Executioner_BOX := $(BOX_RELIQUARY)
 
+Flagellants_PDF := TROOP_PDF_2
+Flagellants_PAGE := 27
+Flagellants_BOX := $(BOX_RELIQUARY)
+
+Flemish_Pikemen_PDF := TROOP_PDF_2
+Flemish_Pikemen_PAGE := 7
+Flemish_Pikemen_BOX := $(BOX_RELIQUARY)
+
+French_Mounted_Knights_PDF := TROOP_PDF_2
+French_Mounted_Knights_PAGE := 1
+French_Mounted_Knights_BOX := $(BOX_RELIQUARY)
+
+Genoese_Crossbowmen_PDF := TROOP_PDF_2
+Genoese_Crossbowmen_PAGE := 11
+Genoese_Crossbowmen_BOX := $(BOX_RELIQUARY)
+
 Ghosts_PDF := TROOP_PDF_1
 Ghosts_PAGE := 23
 Ghosts_BOX := $(BOX_CORE)
+
+Guisamiers_PDF := TROOP_PDF_2
+Guisamiers_PAGE := 10
+Guisamiers_BOX := $(BOX_RELIQUARY)
+
+Heretics_PDF := TROOP_PDF_2
+Heretics_PAGE := 29
+Heretics_BOX := $(BOX_RELIQUARY)
+
+Hunting_Dogs_PDF := TROOP_PDF_2
+Hunting_Dogs_PAGE := 21
+Hunting_Dogs_BOX := $(BOX_RELIQUARY)
+
+Impetuous_Knights_PDF := TROOP_PDF_2
+Impetuous_Knights_PAGE := 2
+Impetuous_Knights_BOX := $(BOX_RELIQUARY)
 
 Jannisaries_PDF := TROOP_PDF_2
 Jannisaries_PAGE := 37
@@ -166,10 +243,26 @@ Mounted_Bowmen_PDF := TROOP_PDF_1
 Mounted_Bowmen_PAGE := 17
 Mounted_Bowmen_BOX := $(BOX_CORE)
 
+Musician_PDF := TROOP_PDF_2
+Musician_PAGE := 26
+Musician_BOX := $(BOX_RELIQUARY)
+
+Peasant_Militia_PDF := TROOP_PDF_2
+Peasant_Militia_PAGE := 17
+Peasant_Militia_BOX := $(BOX_RELIQUARY)
+
 Peasants_PDF := TROOP_PDF_1
 Peasants_PAGE := 19
 Peasants_BOX := ''
 Peasants:	Peasants-C Peasants-B
+
+Penitents_PDF := TROOP_PDF_2
+Penitents_PAGE := 28
+Penitents_BOX := $(BOX_RELIQUARY)
+
+Plague_Bearers_PDF := TROOP_PDF_2
+Plague_Bearers_PAGE := 36
+Plague_Bearers_BOX := $(BOX_RELIQUARY)
 
 Priest_PDF := TROOP_PDF_1
 Priest_PAGE := 25
@@ -178,6 +271,22 @@ Priest_BOX := $(BOX_CORE)
 Provincial_Militia_PDF := TROOP_PDF_1
 Provincial_Militia_PAGE := 10
 Provincial_Militia_BOX := $(BOX_CORE)
+
+Scottish_Pikemen_PDF := TROOP_PDF_2
+Scottish_Pikemen_PAGE := 6
+Scottish_Pikemen_BOX := $(BOX_RELIQUARY)
+
+Support_Infantry_PDF := TROOP_PDF_2
+Support_Infantry_PAGE := 13
+Support_Infantry_BOX := $(BOX_RELIQUARY)
+
+Voracious_Demons_PDF := TROOP_PDF_2
+Voracious_Demons_PAGE := 32
+Voracious_Demons_BOX := $(BOX_RELIQUARY)
+
+Voulgiers_PDF := TROOP_PDF_2
+Voulgiers_PAGE := 9
+Voulgiers_BOX := $(BOX_RELIQUARY)
 
 # Characters
 
@@ -473,7 +582,7 @@ Targoviste-Tepes_BOX := $(BOX_RELIQUARY)
 
 
 ALL_CARDS := $(TROOPS) $(CHARACTERS) $(INTRIGUE)
-ALL_CARDS_BOX := $(ALL_CARDS:=-C) $(ALL_CARDS:=-B) $(ALL_CARDS:=-V)
+ALL_CARDS_BOX := $(ALL_CARDS:=-C) $(ALL_CARDS:=-R) $(ALL_CARDS:=-B) $(ALL_CARDS:=-S) $(ALL_CARDS:=-SE) $(ALL_CARDS:=-V)
 
 $(ALL_CARDS) $(ALL_CARDS_BOX): %: %-$(DENSITY).png
 	touch $@
@@ -569,6 +678,16 @@ $(ALL_CARDS:=-$(DENSITY).png): %-$(DENSITY).png: %.pdf %-$(DENSITY).dim params/f
 		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
 		$@
 
+%-R-$(DENSITY).png: %-$(DENSITY).png %-$(DENSITY).dim params/font
+	. ./$(@:-R-$(DENSITY).png=-$(DENSITY).dim) ; \
+	convert -density $(DENSITY) $< \
+		-font $(FONT) -pointsize $(FONTSIZE) \
+		\( \
+			-size $$(($$W+2*$$HBORDER))x$$(($(DENSITY)*$(MINBORDER)*10/254)) xc:none \
+			-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $(BOX_RELIQUARY)" \
+		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
+		$@
+
 %-B-$(DENSITY).png: %-$(DENSITY).png %-$(DENSITY).dim params/font
 	. ./$(@:-B-$(DENSITY).png=-$(DENSITY).dim) ; \
 	convert -density $(DENSITY) $< \
@@ -576,6 +695,26 @@ $(ALL_CARDS:=-$(DENSITY).png): %-$(DENSITY).png: %.pdf %-$(DENSITY).dim params/f
 		\( \
 			-size $$(($$W+2*$$HBORDER))x$$(($(DENSITY)*$(MINBORDER)*10/254)) xc:none \
 			-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $(BOX_BATTLES)" \
+		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
+		$@
+
+%-S-$(DENSITY).png: %-$(DENSITY).png %-$(DENSITY).dim params/font
+	. ./$(@:-S-$(DENSITY).png=-$(DENSITY).dim) ; \
+	convert -density $(DENSITY) $< \
+		-font $(FONT) -pointsize $(FONTSIZE) \
+		\( \
+			-size $$(($$W+2*$$HBORDER))x$$(($(DENSITY)*$(MINBORDER)*10/254)) xc:none \
+			-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $(BOX_SIEGE)" \
+		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
+		$@
+
+%-SE-$(DENSITY).png: %-$(DENSITY).png %-$(DENSITY).dim params/font
+	. ./$(@:-SE-$(DENSITY).png=-$(DENSITY).dim) ; \
+	convert -density $(DENSITY) $< \
+		-font $(FONT) -pointsize $(FONTSIZE) \
+		\( \
+			-size $$(($$W+2*$$HBORDER))x$$(($(DENSITY)*$(MINBORDER)*10/254)) xc:none \
+			-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $(BOX_SIEGE_EQ)" \
 		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
 		$@
 

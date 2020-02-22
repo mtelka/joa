@@ -1,0 +1,8 @@
+PAGEDEPS_23 := Support_Infantry Bowmen_-_Short_Bow Peasant_Militia Hunting_Dogs Musician Flagellants Penitents Heretics
+define PAGEFMT_23 :=
+\( \
+	\( Support_Infantry-$(DENSITY).png Bowmen_-_Short_Bow-$(DENSITY).png Peasant_Militia-$(DENSITY).png Hunting_Dogs-$(DENSITY).png -rotate 90 -append \) \
+	\( Musician-$(DENSITY).png Flagellants-$(DENSITY).png Penitents-$(DENSITY).png Heretics-$(DENSITY).png -rotate 90 -append \) \
+	+append \
+\)
+endef
