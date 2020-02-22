@@ -1,8 +1,8 @@
-PAGEDEPS_5 := Radu_III_The_Handsome-2 The_Griffin Arnaud_Amanieu_dAlbert Assassin
+PAGEDEPS_5 := Radu_III_The_Handsome-2 The_Griffin Assassin
 define PAGEFMT_5 :=
 \( \
 	\( Radu_III_The_Handsome-2-$(DENSITY).png The_Griffin-$(DENSITY).png +append \) \
-	\( Arnaud_Amanieu_dAlbert-$(DENSITY).png Assassin-$(DENSITY).png +append \) \
+	\( Assassin-$(DENSITY).png \( +clone \) +append \) \
 	-append \
 \)
 endef
