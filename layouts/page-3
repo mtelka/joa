@@ -1,8 +1,8 @@
-PAGEDEPS_3 := Mehmed_II-1 Mehmed_II-2 Vlad_Tepes-1 Vlad_Tepes-2
+PAGEDEPS_3 := Mehmed_II-1 Mehmed_II-2 Vlad_Tepes-1
 define PAGEFMT_3 :=
 \( \
 	\( Mehmed_II-1-$(DENSITY).png Mehmed_II-2-$(DENSITY).png +append \) \
-	\( Vlad_Tepes-1-$(DENSITY).png Vlad_Tepes-2-$(DENSITY).png +append \) \
+	\( Vlad_Tepes-1-$(DENSITY).png \( +clone -fx 1 \) +append \) \
 	-append \
 \)
 endef
