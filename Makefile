@@ -4,12 +4,8 @@ PDFPATH := .cache
 
 DENSITY := 300
 
-VERSION := 2
-NUM_PAGES := 12
+include params/page
 
-# A4: 210 x 297 mm
-PAGEWIDTH := 210
-PAGEHEIGHT := 297
 WIDTH = $(shell identify -density $(DENSITY) -format "%w" $<)
 HEIGHT = $(shell identify -density $(DENSITY) -format "%h" $<)
 MINBORDER := 2
@@ -601,7 +597,7 @@ ALL_PAGES := $(shell seq 1 $(NUM_PAGES))
 $(ALL_PAGES:%=page-%): page-%: page-%-$(DENSITY).pdf
 	touch $@
 
-page-%-$(DENSITY).pdf: layouts/page-% $$(PAGEDEPS_%)
+page-%-$(DENSITY).pdf: params/page layouts/page-% $$(PAGEDEPS_%)
 	convert -density $(DENSITY) -gravity Center \
 		$(PAGEFMT_$(@:page-%-$(DENSITY).pdf=%)) \
 		-extent $$(($(PAGEWIDTH)*$(DENSITY)*10/254))x$$(($(PAGEHEIGHT)*$(DENSITY)*10/254))! \
