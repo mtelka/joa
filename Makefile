@@ -4,6 +4,7 @@ PDFPATH := .cache
 
 DENSITY := 300
 
+include params/font
 include params/page
 
 WIDTH = $(shell identify -density $(DENSITY) -format "%w" $<)
@@ -13,8 +14,6 @@ MAXEXTRA := 3
 MINCUT := 5
 OVERCUT := 2
 CUTWIDTH := 2/10
-FONT := Bitstream-Charter-Regular
-FONTSIZE := 4
 BOX := ''
 ANNOTATE_SPACE := 2
 ANNOTATE_BOX = $$(($$HCUT+$(DENSITY)*$(ANNOTATE_SPACE)*10/254)),0
@@ -523,7 +522,7 @@ $(ALL_CARDS:=-$(DENSITY).dim): %-$(DENSITY).dim: %.pdf
 		echo VCUT=$$VCUT ; \
 	) > $@
 
-$(ALL_CARDS:=-$(DENSITY).png): %-$(DENSITY).png: %.pdf %-$(DENSITY).dim
+$(ALL_CARDS:=-$(DENSITY).png): %-$(DENSITY).png: %.pdf %-$(DENSITY).dim params/font
 	. ./$(@:.png=.dim) ; \
 	convert -density $(DENSITY) -colorspace srgb $< \
 		-crop $$((W))x$$((H))+$$((HCROP))+$$((VCROP)) +repage \
@@ -560,7 +559,7 @@ $(ALL_CARDS:=-$(DENSITY).png): %-$(DENSITY).png: %.pdf %-$(DENSITY).dim
 		\) -geometry +$$(($$W+$$HBORDER))+0 -composite \
 		$@
 
-%-C-$(DENSITY).png: %-$(DENSITY).png %-$(DENSITY).dim
+%-C-$(DENSITY).png: %-$(DENSITY).png %-$(DENSITY).dim params/font
 	. ./$(@:-C-$(DENSITY).png=-$(DENSITY).dim) ; \
 	convert -density $(DENSITY) $< \
 		-font $(FONT) -pointsize $(FONTSIZE) \
@@ -570,7 +569,7 @@ $(ALL_CARDS:=-$(DENSITY).png): %-$(DENSITY).png: %.pdf %-$(DENSITY).dim
 		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
 		$@
 
-%-B-$(DENSITY).png: %-$(DENSITY).png %-$(DENSITY).dim
+%-B-$(DENSITY).png: %-$(DENSITY).png %-$(DENSITY).dim params/font
 	. ./$(@:-B-$(DENSITY).png=-$(DENSITY).dim) ; \
 	convert -density $(DENSITY) $< \
 		-font $(FONT) -pointsize $(FONTSIZE) \
@@ -580,7 +579,7 @@ $(ALL_CARDS:=-$(DENSITY).png): %-$(DENSITY).png: %.pdf %-$(DENSITY).dim
 		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
 		$@
 
-%-V-$(DENSITY).png: %-$(DENSITY).png %-$(DENSITY).dim
+%-V-$(DENSITY).png: %-$(DENSITY).png %-$(DENSITY).dim params/font
 	. ./$(@:-V-$(DENSITY).png=-$(DENSITY).dim) ; \
 	convert -density $(DENSITY) $< \
 		-font $(FONT) -pointsize $(FONTSIZE) \
@@ -597,7 +596,7 @@ ALL_PAGES := $(shell seq 1 $(NUM_PAGES))
 $(ALL_PAGES:%=page-%): page-%: page-%-$(DENSITY).pdf
 	touch $@
 
-page-%-$(DENSITY).pdf: params/page layouts/page-% $$(PAGEDEPS_%)
+page-%-$(DENSITY).pdf: params/font params/page layouts/page-% $$(PAGEDEPS_%)
 	convert -density $(DENSITY) -gravity Center \
 		$(PAGEFMT_$(@:page-%-$(DENSITY).pdf=%)) \
 		-extent $$(($(PAGEWIDTH)*$(DENSITY)*10/254))x$$(($(PAGEHEIGHT)*$(DENSITY)*10/254))! \
@@ -613,7 +612,7 @@ page-%-$(DENSITY).pdf: params/page layouts/page-% $$(PAGEDEPS_%)
 		$@
 
 Joan_of_Arc_-_Updated_Cards_-_v$(VERSION)-$(DENSITY)dpi.pdf: $(ALL_PAGES:%=page-%-$(DENSITY).pdf)
-	pdfunite $? $@
+	pdfunite $+ $@
 
 clean:
 	rm -f $(ALL_CARDS:%=%*) $(ALL_PAGES:%=page-%*)
