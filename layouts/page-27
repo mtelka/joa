@@ -1,0 +1,8 @@
+PAGEDEPS_27 := John_Hawkwood Robert_Knolles Seguin_de_Badefol Dracula-1
+define PAGEFMT_27 :=
+\( \
+	\( John_Hawkwood-$(DENSITY).png Robert_Knolles-$(DENSITY).png +append \) \
+	\( Seguin_de_Badefol-$(DENSITY).png Dracula-1-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

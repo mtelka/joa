@@ -1,0 +1,8 @@
+PAGEDEPS_25 := Henry_V-1 Mounted_Joan_of_Arc-1 Mounted_Joan_of_Arc-2H Mounted_Joan_of_Arc-2U
+define PAGEFMT_25 :=
+\( \
+	\( Henry_V-1-$(DENSITY).png Mounted_Joan_of_Arc-1-$(DENSITY).png +append \) \
+	\( Mounted_Joan_of_Arc-2H-$(DENSITY).png Mounted_Joan_of_Arc-2U-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

@@ -70,24 +70,30 @@ CHARACTERS := \
 	Amaury_de_Craon-1 \
 	Ambroise_de_Lore-1 Ambroise_de_Lore-2 \
 	Archangel_Gabriel-1 Archangel_Gabriel-2 \
+	Arnaud_Amanieu_dAlbert \
 	Arthur_de_Richemont-1 Arthur_de_Richemont-2 \
+	Assassin \
 	Boucicaut-1 Boucicaut-2 \
 	Baudoin_de_Lens \
 	Bertrand_du_Guesclin-2H \
 	Captal_de_Buch-1 Captal_de_Buch-2 \
 	Charles_de_Bourbon-1 Charles_de_Bourbon-2 \
 	Charles_II_the_Magnanimous-1 Charles_II_the_Magnanimous-2 \
+	Dracula-1 \
 	Earl_of_Arundel-1 Earl_of_Arundel-2 \
 	Edward_III-1 Edward_III-2 \
 	Erwan_de_Romorantin-1 Erwan_de_Romorantin-2 \
 	Gilles_de_Rais-1 Gilles_de_Rais-2H Gilles_de_Rais-2U \
+	Henry_V-1 \
 	Jean_de_Dunois-2H Jean_de_Dunois-2U \
 	Jean_de_Vienne-1 Jean_de_Vienne-2 \
 	Joan_of_Arc-1 Joan_of_Arc-2H Joan_of_Arc-2U \
 	John_Chandos-1 \
 	John_de_la_Pole-1 John_de_la_Pole-2 \
 	John_Fastolf-2H John_Fastolf-2U \
+	John_Hawkwood \
 	John_I_of_Luxembourg \
+	John_II_of_Luxembourg-2 \
 	John_of_Lancaster-2U \
 	John_Stewart_of_Buchan-1 John_Stewart_of_Buchan-2 \
 	John_Stewart_of_Darnley-1 John_Stewart_of_Darnley-2 \
@@ -96,17 +102,23 @@ CHARACTERS := \
 	Mounted_Hero_E-1 \
 	Mounted_Hero_F-1 \
 	Mounted_Hero_H-1 \
+	Mounted_Joan_of_Arc-1 Mounted_Joan_of_Arc-2H Mounted_Joan_of_Arc-2U \
 	Philippe_the_Bold \
 	Philippe_VI_de_Valois-1 Philippe_VI_de_Valois-2H Philippe_VI_de_Valois-2U \
 	Poton_de_Xaintrailles-1 Poton_de_Xaintrailles-2H Poton_de_Xaintrailles-2U \
+	Radu_III_The_Handsome-2 \
+	Robert_Knolles \
 	Saint_Martha-1 \
+	Seguin_de_Badefol \
 	The_Courser \
 	The_Great_Reaper \
+	The_Griffin \
 	The_Tarasque-2 \
 	The_Werewolf-1 \
 	The_Witch-1 The_Witch-2 \
 	Thomas_de_Scales-1 Thomas_de_Scales-2 \
-	Vlad_Tepes-1 Vlad_Tepes-2
+	Vlad_Tepes-1 Vlad_Tepes-2 \
+	William_Wallace-1 William_Wallace-2H William_Wallace-2U
 
 # 70 x 120 mm
 $(CHARACTERS):	W := 70
@@ -310,6 +322,10 @@ Archangel_Gabriel-2_PDF := CHARACTER_PDF_2
 Archangel_Gabriel-2_PAGE := 57
 Archangel_Gabriel-2_BOX := $(BOX_CORE)
 
+Arnaud_Amanieu_dAlbert_PDF := CHARACTER_PDF_3
+Arnaud_Amanieu_dAlbert_PAGE := 25
+Arnaud_Amanieu_dAlbert_BOX := $(BOX_RELIQUARY)
+
 Arthur_de_Richemont-1_PDF := CHARACTER_PDF_1
 Arthur_de_Richemont-1_PAGE := 22
 Arthur_de_Richemont-1_BOX := $(BOX_CORE)
@@ -317,6 +333,10 @@ Arthur_de_Richemont-1_BOX := $(BOX_CORE)
 Arthur_de_Richemont-2_PDF := CHARACTER_PDF_2
 Arthur_de_Richemont-2_PAGE := 22
 Arthur_de_Richemont-2_BOX := $(BOX_CORE)
+
+Assassin_PDF := CHARACTER_PDF_3
+Assassin_PAGE := 27
+Assassin_BOX := $(BOX_RELIQUARY)
 
 Boucicaut-1_PDF := CHARACTER_PDF_1
 Boucicaut-1_PAGE := 46
@@ -358,6 +378,10 @@ Charles_II_the_Magnanimous-2_PDF := CHARACTER_PDF_2
 Charles_II_the_Magnanimous-2_PAGE := 45
 Charles_II_the_Magnanimous-2_BOX := $(BOX_CORE)
 
+Dracula-1_PDF := CHARACTER_PDF_3
+Dracula-1_PAGE := 16
+Dracula-1_BOX := $(BOX_RELIQUARY)
+
 Earl_of_Arundel-1_PDF := CHARACTER_PDF_1
 Earl_of_Arundel-1_PAGE := 17
 Earl_of_Arundel-1_BOX := $(BOX_CORE)
@@ -393,6 +417,10 @@ Gilles_de_Rais-2H_BOX := $(BOX_CORE)
 Gilles_de_Rais-2U_PDF := CHARACTER_PDF_2
 Gilles_de_Rais-2U_PAGE := 29
 Gilles_de_Rais-2U_BOX := $(BOX_CORE)
+
+Henry_V-1_PDF := CHARACTER_PDF_3
+Henry_V-1_PAGE := 3
+Henry_V-1_BOX := $(BOX_RELIQUARY)
 
 Jean_de_Dunois-2H_PDF := CHARACTER_PDF_1
 Jean_de_Dunois-2H_PAGE := 31
@@ -442,9 +470,17 @@ John_Fastolf-2U_PDF := CHARACTER_PDF_2
 John_Fastolf-2U_PAGE := 2
 John_Fastolf-2U_BOX := $(BOX_CORE)
 
+John_Hawkwood_PDF := CHARACTER_PDF_3
+John_Hawkwood_PAGE := 11
+John_Hawkwood_BOX := $(BOX_RELIQUARY)
+
 John_I_of_Luxembourg_PDF := CHARACTER_PDF_1
 John_I_of_Luxembourg_PAGE := 44
 John_I_of_Luxembourg_BOX := $(BOX_CORE)
+
+John_II_of_Luxembourg-2_PDF := CHARACTER_PDF_4
+John_II_of_Luxembourg-2_PAGE := 7
+John_II_of_Luxembourg-2_BOX := $(BOX_RELIQUARY)
 
 John_of_Lancaster-2U_PDF := CHARACTER_PDF_2
 John_of_Lancaster-2U_PAGE := 11
@@ -494,6 +530,18 @@ Mounted_Hero_H-1_PDF := CHARACTER_PDF_1
 Mounted_Hero_H-1_PAGE := 59
 Mounted_Hero_H-1_BOX := $(BOX_CORE)
 
+Mounted_Joan_of_Arc-1_PDF := CHARACTER_PDF_3
+Mounted_Joan_of_Arc-1_PAGE := 5
+Mounted_Joan_of_Arc-1_BOX := $(BOX_RELIQUARY)
+
+Mounted_Joan_of_Arc-2H_PDF := CHARACTER_PDF_3
+Mounted_Joan_of_Arc-2H_PAGE := 6
+Mounted_Joan_of_Arc-2H_BOX := $(BOX_RELIQUARY)
+
+Mounted_Joan_of_Arc-2U_PDF := CHARACTER_PDF_4
+Mounted_Joan_of_Arc-2U_PAGE := 6
+Mounted_Joan_of_Arc-2U_BOX := $(BOX_RELIQUARY)
+
 Philippe_the_Bold_PDF := CHARACTER_PDF_1
 Philippe_the_Bold_PAGE := 49
 Philippe_the_Bold_BOX := $(BOX_CORE)
@@ -522,9 +570,21 @@ Poton_de_Xaintrailles-2U_PDF := CHARACTER_PDF_2
 Poton_de_Xaintrailles-2U_PAGE := 39
 Poton_de_Xaintrailles-2U_BOX := $(BOX_CORE)
 
+Radu_III_The_Handsome-2_PDF := CHARACTER_PDF_4
+Radu_III_The_Handsome-2_PAGE := 17
+Radu_III_The_Handsome-2_BOX := $(BOX_RELIQUARY)
+
+Robert_Knolles_PDF := CHARACTER_PDF_3
+Robert_Knolles_PAGE := 12
+Robert_Knolles_BOX := $(BOX_RELIQUARY)
+
 Saint_Martha-1_PDF := CHARACTER_PDF_1
 Saint_Martha-1_PAGE := 68
 Saint_Martha-1_BOX := $(BOX_CORE)
+
+Seguin_de_Badefol_PDF := CHARACTER_PDF_3
+Seguin_de_Badefol_PAGE := 13
+Seguin_de_Badefol_BOX := $(BOX_RELIQUARY)
 
 The_Courser_PDF := CHARACTER_PDF_1
 The_Courser_PAGE := 72
@@ -533,6 +593,10 @@ The_Courser_BOX := $(BOX_CORE)
 The_Great_Reaper_PDF := CHARACTER_PDF_3
 The_Great_Reaper_PAGE := 20
 The_Great_Reaper_BOX := $(BOX_RELIQUARY)
+
+The_Griffin_PDF := CHARACTER_PDF_3
+The_Griffin_PAGE := 22
+The_Griffin_BOX := $(BOX_RELIQUARY)
 
 The_Tarasque-2_PDF := CHARACTER_PDF_2
 The_Tarasque-2_PAGE := 66
@@ -565,6 +629,18 @@ Vlad_Tepes-1_BOX := $(BOX_RELIQUARY)
 Vlad_Tepes-2_PDF := CHARACTER_PDF_4
 Vlad_Tepes-2_PAGE := 15
 Vlad_Tepes-2_BOX := $(BOX_RELIQUARY)
+
+William_Wallace-1_PDF := CHARACTER_PDF_3
+William_Wallace-1_PAGE := 8
+William_Wallace-1_BOX := $(BOX_RELIQUARY)
+
+William_Wallace-2H_PDF := CHARACTER_PDF_3
+William_Wallace-2H_PAGE := 9
+William_Wallace-2H_BOX := $(BOX_RELIQUARY)
+
+William_Wallace-2U_PDF := CHARACTER_PDF_4
+William_Wallace-2U_PAGE := 9
+William_Wallace-2U_BOX := $(BOX_RELIQUARY)
 
 # Intrigue
 

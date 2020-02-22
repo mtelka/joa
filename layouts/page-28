@@ -1,0 +1,8 @@
+PAGEDEPS_28 := Radu_III_The_Handsome-2 The_Griffin Arnaud_Amanieu_dAlbert Assassin
+define PAGEFMT_28 :=
+\( \
+	\( Radu_III_The_Handsome-2-$(DENSITY).png The_Griffin-$(DENSITY).png +append \) \
+	\( Arnaud_Amanieu_dAlbert-$(DENSITY).png Assassin-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

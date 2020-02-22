@@ -1,5 +1,5 @@
 VERSION := 2
-NUM_PAGES := 24
+NUM_PAGES := 29
 
 # A4: 210 x 297 mm
 PAGEWIDTH := 210
