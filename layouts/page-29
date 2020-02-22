@@ -1,8 +1,6 @@
-PAGEDEPS_29 := Assassin
+PAGEDEPS_29 :=
 define PAGEFMT_29 :=
 \( \
-	\( Assassin-$(DENSITY).png \( +clone -fx 1 \) +append \) \
-	\( +clone -fx 1 \) \
-	-append \
+	-size 1x1 xc:none \
 \)
 endef
