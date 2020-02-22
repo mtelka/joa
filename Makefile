@@ -5,7 +5,7 @@ PDFPATH := .cache
 DENSITY := 300
 
 VERSION := 2
-NUM_PAGES := 6
+NUM_PAGES := 12
 
 # A4: 210 x 297 mm
 PAGEWIDTH := 210
@@ -49,15 +49,46 @@ $(TROOPS):	W := 63
 $(TROOPS): 	H := 88
 
 CHARACTERS := \
-	John_Stewart_of_Buchan-1 \
-	John_Stewart_of_Buchan-2 \
-	John_Stewart_of_Darnley-1 \
-	John_Stewart_of_Darnley-2 \
-	Mehmed_II-1 \
-	Mehmed_II-2 \
+	Amaury_de_Craon-1 \
+	Ambroise_de_Lore-1 Ambroise_de_Lore-2 \
+	Archangel_Gabriel-1 Archangel_Gabriel-2 \
+	Arthur_de_Richemont-1 Arthur_de_Richemont-2 \
+	Boucicaut-1 Boucicaut-2 \
+	Baudoin_de_Lens \
+	Bertrand_du_Guesclin-2H \
+	Captal_de_Buch-1 Captal_de_Buch-2 \
+	Charles_de_Bourbon-1 Charles_de_Bourbon-2 \
+	Charles_II_the_Magnanimous-1 Charles_II_the_Magnanimous-2 \
+	Earl_of_Arundel-1 Earl_of_Arundel-2 \
+	Edward_III-1 Edward_III-2 \
+	Erwan_de_Romorantin-1 Erwan_de_Romorantin-2 \
+	Gilles_de_Rais-1 Gilles_de_Rais-2H Gilles_de_Rais-2U \
+	Jean_de_Dunois-2H Jean_de_Dunois-2U \
+	Jean_de_Vienne-1 Jean_de_Vienne-2 \
+	Joan_of_Arc-1 Joan_of_Arc-2H Joan_of_Arc-2U \
+	John_Chandos-1 \
+	John_de_la_Pole-1 John_de_la_Pole-2 \
+	John_Fastolf-2H John_Fastolf-2U \
+	John_I_of_Luxembourg \
+	John_of_Lancaster-2U \
+	John_Stewart_of_Buchan-1 John_Stewart_of_Buchan-2 \
+	John_Stewart_of_Darnley-1 John_Stewart_of_Darnley-2 \
+	La_Hire-2H La_Hire-2U \
+	Mehmed_II-1 Mehmed_II-2 \
+	Mounted_Hero_E-1 \
+	Mounted_Hero_F-1 \
+	Mounted_Hero_H-1 \
+	Philippe_the_Bold \
+	Philippe_VI_de_Valois-1 Philippe_VI_de_Valois-2H Philippe_VI_de_Valois-2U \
+	Poton_de_Xaintrailles-1 Poton_de_Xaintrailles-2H Poton_de_Xaintrailles-2U \
+	Saint_Martha-1 \
+	The_Courser \
 	The_Great_Reaper \
-	Vlad_Tepes-1 \
-	Vlad_Tepes-2
+	The_Tarasque-2 \
+	The_Werewolf-1 \
+	The_Witch-1 The_Witch-2 \
+	Thomas_de_Scales-1 Thomas_de_Scales-2 \
+	Vlad_Tepes-1 Vlad_Tepes-2
 
 # 70 x 120 mm
 $(CHARACTERS):	W := 70
@@ -155,6 +186,166 @@ Provincial_Militia_BOX := $(BOX_CORE)
 
 # Characters
 
+Amaury_de_Craon-1_PDF := CHARACTER_PDF_1
+Amaury_de_Craon-1_PAGE := 47
+Amaury_de_Craon-1_BOX := $(BOX_CORE)
+
+Ambroise_de_Lore-1_PDF := CHARACTER_PDF_1
+Ambroise_de_Lore-1_PAGE := 21
+Ambroise_de_Lore-1_BOX := $(BOX_CORE)
+
+Ambroise_de_Lore-2_PDF := CHARACTER_PDF_2
+Ambroise_de_Lore-2_PAGE := 21
+Ambroise_de_Lore-2_BOX := $(BOX_CORE)
+
+Archangel_Gabriel-1_PDF := CHARACTER_PDF_1
+Archangel_Gabriel-1_PAGE := 57
+Archangel_Gabriel-1_BOX := $(BOX_CORE)
+
+Archangel_Gabriel-2_PDF := CHARACTER_PDF_2
+Archangel_Gabriel-2_PAGE := 57
+Archangel_Gabriel-2_BOX := $(BOX_CORE)
+
+Arthur_de_Richemont-1_PDF := CHARACTER_PDF_1
+Arthur_de_Richemont-1_PAGE := 22
+Arthur_de_Richemont-1_BOX := $(BOX_CORE)
+
+Arthur_de_Richemont-2_PDF := CHARACTER_PDF_2
+Arthur_de_Richemont-2_PAGE := 22
+Arthur_de_Richemont-2_BOX := $(BOX_CORE)
+
+Boucicaut-1_PDF := CHARACTER_PDF_1
+Boucicaut-1_PAGE := 46
+Boucicaut-1_BOX := $(BOX_CORE)
+
+Boucicaut-2_PDF := CHARACTER_PDF_2
+Boucicaut-2_PAGE := 46
+Boucicaut-2_BOX := $(BOX_CORE)
+
+Baudoin_de_Lens_PDF := CHARACTER_PDF_1
+Baudoin_de_Lens_PAGE := 23
+Baudoin_de_Lens_BOX := $(BOX_CORE)
+
+Bertrand_du_Guesclin-2H_PDF := CHARACTER_PDF_1
+Bertrand_du_Guesclin-2H_PAGE := 27
+Bertrand_du_Guesclin-2H_BOX := $(BOX_CORE)
+
+Captal_de_Buch-1_PDF := CHARACTER_PDF_1
+Captal_de_Buch-1_PAGE := 19
+Captal_de_Buch-1_BOX := $(BOX_CORE)
+
+Captal_de_Buch-2_PDF := CHARACTER_PDF_2
+Captal_de_Buch-2_PAGE := 19
+Captal_de_Buch-2_BOX := $(BOX_CORE)
+
+Charles_de_Bourbon-1_PDF := CHARACTER_PDF_1
+Charles_de_Bourbon-1_PAGE := 24
+Charles_de_Bourbon-1_BOX := $(BOX_CORE)
+
+Charles_de_Bourbon-2_PDF := CHARACTER_PDF_2
+Charles_de_Bourbon-2_PAGE := 24
+Charles_de_Bourbon-2_BOX := $(BOX_CORE)
+
+Charles_II_the_Magnanimous-1_PDF := CHARACTER_PDF_1
+Charles_II_the_Magnanimous-1_PAGE := 45
+Charles_II_the_Magnanimous-1_BOX := $(BOX_CORE)
+
+Charles_II_the_Magnanimous-2_PDF := CHARACTER_PDF_2
+Charles_II_the_Magnanimous-2_PAGE := 45
+Charles_II_the_Magnanimous-2_BOX := $(BOX_CORE)
+
+Earl_of_Arundel-1_PDF := CHARACTER_PDF_1
+Earl_of_Arundel-1_PAGE := 17
+Earl_of_Arundel-1_BOX := $(BOX_CORE)
+
+Earl_of_Arundel-2_PDF := CHARACTER_PDF_2
+Earl_of_Arundel-2_PAGE := 17
+Earl_of_Arundel-2_BOX := $(BOX_CORE)
+
+Edward_III-1_PDF := CHARACTER_PDF_1
+Edward_III-1_PAGE := 20
+Edward_III-1_BOX := $(BOX_CORE)
+
+Edward_III-2_PDF := CHARACTER_PDF_2
+Edward_III-2_PAGE := 20
+Edward_III-2_BOX := $(BOX_CORE)
+
+Erwan_de_Romorantin-1_PDF := CHARACTER_PDF_1
+Erwan_de_Romorantin-1_PAGE := 48
+Erwan_de_Romorantin-1_BOX := $(BOX_CORE)
+
+Erwan_de_Romorantin-2_PDF := CHARACTER_PDF_2
+Erwan_de_Romorantin-2_PAGE := 48
+Erwan_de_Romorantin-2_BOX := $(BOX_CORE)
+
+Gilles_de_Rais-1_PDF := CHARACTER_PDF_1
+Gilles_de_Rais-1_PAGE := 28
+Gilles_de_Rais-1_BOX := $(BOX_CORE)
+
+Gilles_de_Rais-2H_PDF := CHARACTER_PDF_1
+Gilles_de_Rais-2H_PAGE := 29
+Gilles_de_Rais-2H_BOX := $(BOX_CORE)
+
+Gilles_de_Rais-2U_PDF := CHARACTER_PDF_2
+Gilles_de_Rais-2U_PAGE := 29
+Gilles_de_Rais-2U_BOX := $(BOX_CORE)
+
+Jean_de_Dunois-2H_PDF := CHARACTER_PDF_1
+Jean_de_Dunois-2H_PAGE := 31
+Jean_de_Dunois-2H_BOX := $(BOX_CORE)
+
+Jean_de_Dunois-2U_PDF := CHARACTER_PDF_2
+Jean_de_Dunois-2U_PAGE := 31
+Jean_de_Dunois-2U_BOX := $(BOX_CORE)
+
+Jean_de_Vienne-1_PDF := CHARACTER_PDF_1
+Jean_de_Vienne-1_PAGE := 32
+Jean_de_Vienne-1_BOX := $(BOX_CORE)
+
+Jean_de_Vienne-2_PDF := CHARACTER_PDF_2
+Jean_de_Vienne-2_PAGE := 32
+Jean_de_Vienne-2_BOX := $(BOX_CORE)
+
+Joan_of_Arc-1_PDF := CHARACTER_PDF_1
+Joan_of_Arc-1_PAGE := 34
+Joan_of_Arc-1_BOX := $(BOX_CORE)
+
+Joan_of_Arc-2H_PDF := CHARACTER_PDF_1
+Joan_of_Arc-2H_PAGE := 35
+Joan_of_Arc-2H_BOX := $(BOX_CORE)
+
+Joan_of_Arc-2U_PDF := CHARACTER_PDF_2
+Joan_of_Arc-2U_PAGE := 35
+Joan_of_Arc-2U_BOX := $(BOX_CORE)
+
+John_Chandos-1_PDF := CHARACTER_PDF_1
+John_Chandos-1_PAGE := 3
+John_Chandos-1_BOX := $(BOX_CORE)
+
+John_de_la_Pole-1_PDF := CHARACTER_PDF_1
+John_de_la_Pole-1_PAGE := 12
+John_de_la_Pole-1_BOX := $(BOX_CORE)
+
+John_de_la_Pole-2_PDF := CHARACTER_PDF_2
+John_de_la_Pole-2_PAGE := 12
+John_de_la_Pole-2_BOX := $(BOX_CORE)
+
+John_Fastolf-2H_PDF := CHARACTER_PDF_1
+John_Fastolf-2H_PAGE := 2
+John_Fastolf-2H_BOX := $(BOX_CORE)
+
+John_Fastolf-2U_PDF := CHARACTER_PDF_2
+John_Fastolf-2U_PAGE := 2
+John_Fastolf-2U_BOX := $(BOX_CORE)
+
+John_I_of_Luxembourg_PDF := CHARACTER_PDF_1
+John_I_of_Luxembourg_PAGE := 44
+John_I_of_Luxembourg_BOX := $(BOX_CORE)
+
+John_of_Lancaster-2U_PDF := CHARACTER_PDF_2
+John_of_Lancaster-2U_PAGE := 11
+John_of_Lancaster-2U_BOX := $(BOX_CORE)
+
 John_Stewart_of_Buchan-1_PDF := CHARACTER_PDF_1
 John_Stewart_of_Buchan-1_PAGE := 54
 John_Stewart_of_Buchan-1_BOX := $(BOX_CORE)
@@ -171,6 +362,14 @@ John_Stewart_of_Darnley-2_PDF := CHARACTER_PDF_4
 John_Stewart_of_Darnley-2_PAGE := 10
 John_Stewart_of_Darnley-2_BOX := $(BOX_RELIQUARY)
 
+La_Hire-2H_PDF := CHARACTER_PDF_1
+La_Hire-2H_PAGE := 37
+La_Hire-2H_BOX := $(BOX_CORE)
+
+La_Hire-2U_PDF := CHARACTER_PDF_2
+La_Hire-2U_PAGE := 37
+La_Hire-2U_BOX := $(BOX_CORE)
+
 Mehmed_II-1_PDF := CHARACTER_PDF_3
 Mehmed_II-1_PAGE := 18
 Mehmed_II-1_BOX := $(BOX_RELIQUARY)
@@ -179,9 +378,81 @@ Mehmed_II-2_PDF := CHARACTER_PDF_4
 Mehmed_II-2_PAGE := 18
 Mehmed_II-2_BOX := $(BOX_RELIQUARY)
 
+Mounted_Hero_E-1_PDF := CHARACTER_PDF_1
+Mounted_Hero_E-1_PAGE := 60
+Mounted_Hero_E-1_BOX := $(BOX_CORE)
+
+Mounted_Hero_F-1_PDF := CHARACTER_PDF_1
+Mounted_Hero_F-1_PAGE := 61
+Mounted_Hero_F-1_BOX := $(BOX_CORE)
+
+Mounted_Hero_H-1_PDF := CHARACTER_PDF_1
+Mounted_Hero_H-1_PAGE := 59
+Mounted_Hero_H-1_BOX := $(BOX_CORE)
+
+Philippe_the_Bold_PDF := CHARACTER_PDF_1
+Philippe_the_Bold_PAGE := 49
+Philippe_the_Bold_BOX := $(BOX_CORE)
+
+Philippe_VI_de_Valois-1_PDF := CHARACTER_PDF_1
+Philippe_VI_de_Valois-1_PAGE := 42
+Philippe_VI_de_Valois-1_BOX := $(BOX_CORE)
+
+Philippe_VI_de_Valois-2H_PDF := CHARACTER_PDF_1
+Philippe_VI_de_Valois-2H_PAGE := 43
+Philippe_VI_de_Valois-2H_BOX := $(BOX_CORE)
+
+Philippe_VI_de_Valois-2U_PDF := CHARACTER_PDF_2
+Philippe_VI_de_Valois-2U_PAGE := 43
+Philippe_VI_de_Valois-2U_BOX := $(BOX_CORE)
+
+Poton_de_Xaintrailles-1_PDF := CHARACTER_PDF_1
+Poton_de_Xaintrailles-1_PAGE := 38
+Poton_de_Xaintrailles-1_BOX := $(BOX_CORE)
+
+Poton_de_Xaintrailles-2H_PDF := CHARACTER_PDF_1
+Poton_de_Xaintrailles-2H_PAGE := 39
+Poton_de_Xaintrailles-2H_BOX := $(BOX_CORE)
+
+Poton_de_Xaintrailles-2U_PDF := CHARACTER_PDF_2
+Poton_de_Xaintrailles-2U_PAGE := 39
+Poton_de_Xaintrailles-2U_BOX := $(BOX_CORE)
+
+Saint_Martha-1_PDF := CHARACTER_PDF_1
+Saint_Martha-1_PAGE := 68
+Saint_Martha-1_BOX := $(BOX_CORE)
+
+The_Courser_PDF := CHARACTER_PDF_1
+The_Courser_PAGE := 72
+The_Courser_BOX := $(BOX_CORE)
+
 The_Great_Reaper_PDF := CHARACTER_PDF_3
 The_Great_Reaper_PAGE := 20
 The_Great_Reaper_BOX := $(BOX_RELIQUARY)
+
+The_Tarasque-2_PDF := CHARACTER_PDF_2
+The_Tarasque-2_PAGE := 66
+The_Tarasque-2_BOX := $(BOX_CORE)
+
+The_Werewolf-1_PDF := CHARACTER_PDF_1
+The_Werewolf-1_PAGE := 55
+The_Werewolf-1_BOX := $(BOX_CORE)
+
+The_Witch-1_PDF := CHARACTER_PDF_1
+The_Witch-1_PAGE := 56
+The_Witch-1_BOX := $(BOX_CORE)
+
+The_Witch-2_PDF := CHARACTER_PDF_2
+The_Witch-2_PAGE := 56
+The_Witch-2_BOX := $(BOX_CORE)
+
+Thomas_de_Scales-1_PDF := CHARACTER_PDF_1
+Thomas_de_Scales-1_PAGE := 14
+Thomas_de_Scales-1_BOX := $(BOX_CORE)
+
+Thomas_de_Scales-2_PDF := CHARACTER_PDF_2
+Thomas_de_Scales-2_PAGE := 14
+Thomas_de_Scales-2_BOX := $(BOX_CORE)
 
 Vlad_Tepes-1_PDF := CHARACTER_PDF_3
 Vlad_Tepes-1_PAGE := 15
@@ -374,6 +645,60 @@ define PAGEFMT_6 :=
 	\( Provincial_Militia-$(DENSITY).png \( +clone \) Bowmen-C-$(DENSITY).png \( +clone \) -rotate 90 -append \) \
 	\( Ghosts-$(DENSITY).png Priest-$(DENSITY).png Citizen-C-$(DENSITY).png Bonesetter-$(DENSITY).png -rotate 90 -append \) \
 	+append \
+\)
+endef
+
+PAGEDEPS_7 := John_Fastolf-2H John_Fastolf-2U John_Chandos-1 John_of_Lancaster-2U
+define PAGEFMT_7 :=
+\( \
+	\( John_Fastolf-2H-$(DENSITY).png John_Fastolf-2U-$(DENSITY).png +append \) \
+	\( John_Chandos-1-$(DENSITY).png John_of_Lancaster-2U-$(DENSITY).png +append \) \
+	-append \
+\)
+endef
+
+PAGEDEPS_8 := John_de_la_Pole-1 John_de_la_Pole-2 Thomas_de_Scales-1 Thomas_de_Scales-2
+define PAGEFMT_8 :=
+\( \
+	\( John_de_la_Pole-1-$(DENSITY).png John_de_la_Pole-2-$(DENSITY).png +append \) \
+	\( Thomas_de_Scales-1-$(DENSITY).png Thomas_de_Scales-2-$(DENSITY).png +append \) \
+	-append \
+\)
+endef
+
+PAGEDEPS_9 := Earl_of_Arundel-1 Earl_of_Arundel-2 Captal_de_Buch-1 Captal_de_Buch-2
+define PAGEFMT_9 :=
+\( \
+	\( Earl_of_Arundel-1-$(DENSITY).png Earl_of_Arundel-2-$(DENSITY).png +append \) \
+	\( Captal_de_Buch-1-$(DENSITY).png Captal_de_Buch-2-$(DENSITY).png +append \) \
+	-append \
+\)
+endef
+
+PAGEDEPS_10 := Edward_III-1 Edward_III-2 Ambroise_de_Lore-1 Ambroise_de_Lore-2
+define PAGEFMT_10 :=
+\( \
+	\( Edward_III-1-$(DENSITY).png Edward_III-2-$(DENSITY).png +append \) \
+	\( Ambroise_de_Lore-1-$(DENSITY).png Ambroise_de_Lore-2-$(DENSITY).png +append \) \
+	-append \
+\)
+endef
+
+PAGEDEPS_11 := Arthur_de_Richemont-1 Arthur_de_Richemont-2 Baudoin_de_Lens Charles_de_Bourbon-1
+define PAGEFMT_11 :=
+\( \
+	\( Arthur_de_Richemont-1-$(DENSITY).png Arthur_de_Richemont-2-$(DENSITY).png +append \) \
+	\( Baudoin_de_Lens-$(DENSITY).png Charles_de_Bourbon-1-$(DENSITY).png +append \) \
+	-append \
+\)
+endef
+
+PAGEDEPS_12 := Charles_de_Bourbon-2 Bertrand_du_Guesclin-2H Gilles_de_Rais-1 Gilles_de_Rais-2H
+define PAGEFMT_12 :=
+\( \
+	\( Charles_de_Bourbon-2-$(DENSITY).png Bertrand_du_Guesclin-2H-$(DENSITY).png +append \) \
+	\( Gilles_de_Rais-1-$(DENSITY).png Gilles_de_Rais-2H-$(DENSITY).png +append \) \
+	-append \
 \)
 endef
 
