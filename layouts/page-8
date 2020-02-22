@@ -1,0 +1,8 @@
+PAGEDEPS_8 := John_de_la_Pole-1 John_de_la_Pole-2 Thomas_de_Scales-1 Thomas_de_Scales-2
+define PAGEFMT_8 :=
+\( \
+	\( John_de_la_Pole-1-$(DENSITY).png John_de_la_Pole-2-$(DENSITY).png +append \) \
+	\( Thomas_de_Scales-1-$(DENSITY).png Thomas_de_Scales-2-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

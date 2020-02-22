@@ -2,7 +2,7 @@
 *.png
 *.dim
 *.pdf
-page-*
+/page-*
 Executioner
 Jannisaries
 Merchant_Girl*

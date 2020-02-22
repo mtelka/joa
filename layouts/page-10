@@ -1,0 +1,8 @@
+PAGEDEPS_10 := Edward_III-1 Edward_III-2 Ambroise_de_Lore-1 Ambroise_de_Lore-2
+define PAGEFMT_10 :=
+\( \
+	\( Edward_III-1-$(DENSITY).png Edward_III-2-$(DENSITY).png +append \) \
+	\( Ambroise_de_Lore-1-$(DENSITY).png Ambroise_de_Lore-2-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

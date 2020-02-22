@@ -1,0 +1,8 @@
+PAGEDEPS_12 := Charles_de_Bourbon-2 Bertrand_du_Guesclin-2H Gilles_de_Rais-1 Gilles_de_Rais-2H
+define PAGEFMT_12 :=
+\( \
+	\( Charles_de_Bourbon-2-$(DENSITY).png Bertrand_du_Guesclin-2H-$(DENSITY).png +append \) \
+	\( Gilles_de_Rais-1-$(DENSITY).png Gilles_de_Rais-2H-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

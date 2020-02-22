@@ -1,0 +1,8 @@
+PAGEDEPS_2 := Merchant_Girl Mounted_Bowmen Peasants
+define PAGEFMT_2 :=
+\( \
+	\( Merchant_Girl-C-$(DENSITY).png Merchant_Girl-V-$(DENSITY).png Mounted_Bowmen-$(DENSITY).png Mounted_Bowmen-$(DENSITY).png -rotate 90 -append \) \
+	\( Peasants-C-$(DENSITY).png Peasants-C-$(DENSITY).png Peasants-B-$(DENSITY).png Peasants-B-$(DENSITY).png -rotate 90 -append \) \
+	+append \
+\)
+endef

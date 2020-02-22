@@ -1,0 +1,8 @@
+PAGEDEPS_9 := Earl_of_Arundel-1 Earl_of_Arundel-2 Captal_de_Buch-1 Captal_de_Buch-2
+define PAGEFMT_9 :=
+\( \
+	\( Earl_of_Arundel-1-$(DENSITY).png Earl_of_Arundel-2-$(DENSITY).png +append \) \
+	\( Captal_de_Buch-1-$(DENSITY).png Captal_de_Buch-2-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

@@ -1,0 +1,8 @@
+PAGEDEPS_11 := Arthur_de_Richemont-1 Arthur_de_Richemont-2 Baudoin_de_Lens Charles_de_Bourbon-1
+define PAGEFMT_11 :=
+\( \
+	\( Arthur_de_Richemont-1-$(DENSITY).png Arthur_de_Richemont-2-$(DENSITY).png +append \) \
+	\( Baudoin_de_Lens-$(DENSITY).png Charles_de_Bourbon-1-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

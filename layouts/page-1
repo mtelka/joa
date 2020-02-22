@@ -1,0 +1,8 @@
+PAGEDEPS_1 := Patay-French Executioner Jannisaries Targoviste-Mehmed Targoviste-Tepes
+define PAGEFMT_1 :=
+\( \
+	\( Patay-French-$(DENSITY).png \( Executioner-$(DENSITY).png Jannisaries-$(DENSITY).png -rotate 90 -append \) +append \) \
+	\( Targoviste-Mehmed-$(DENSITY).png Targoviste-Tepes-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

@@ -594,120 +594,14 @@ $(ALL_CARDS:=-$(DENSITY).png): %-$(DENSITY).png: %.pdf %-$(DENSITY).dim
 		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
 		$@
 
-PAGEDEPS_1 := Patay-French Executioner Jannisaries Targoviste-Mehmed Targoviste-Tepes
-define PAGEFMT_1 :=
-\( \
-	\( Patay-French-$(DENSITY).png \( Executioner-$(DENSITY).png Jannisaries-$(DENSITY).png -rotate 90 -append \) +append \) \
-	\( Targoviste-Mehmed-$(DENSITY).png Targoviste-Tepes-$(DENSITY).png +append \) \
-	-append \
-\)
-endef
-
-PAGEDEPS_2 := Merchant_Girl Mounted_Bowmen Peasants
-define PAGEFMT_2 :=
-\( \
-	\( Merchant_Girl-C-$(DENSITY).png Merchant_Girl-V-$(DENSITY).png Mounted_Bowmen-$(DENSITY).png Mounted_Bowmen-$(DENSITY).png -rotate 90 -append \) \
-	\( Peasants-C-$(DENSITY).png Peasants-C-$(DENSITY).png Peasants-B-$(DENSITY).png Peasants-B-$(DENSITY).png -rotate 90 -append \) \
-	+append \
-\)
-endef
-
-PAGEDEPS_3 := Mehmed_II-1 Mehmed_II-2 Vlad_Tepes-1 Vlad_Tepes-2
-define PAGEFMT_3 :=
-\( \
-	\( Mehmed_II-1-$(DENSITY).png Mehmed_II-2-$(DENSITY).png +append \) \
-	\( Vlad_Tepes-1-$(DENSITY).png Vlad_Tepes-2-$(DENSITY).png +append \) \
-	-append \
-\)
-endef
-
-PAGEDEPS_4 := John_Stewart_of_Buchan-1 John_Stewart_of_Buchan-2 John_Stewart_of_Darnley-1 John_Stewart_of_Darnley-2
-define PAGEFMT_4 :=
-\( \
-	\( John_Stewart_of_Buchan-1-$(DENSITY).png John_Stewart_of_Buchan-2-$(DENSITY).png +append \) \
-	\( John_Stewart_of_Darnley-1-$(DENSITY).png John_Stewart_of_Darnley-2-$(DENSITY).png +append \) \
-	-append \
-\)
-endef
-
-PAGEDEPS_5 := The_Great_Reaper
-define PAGEFMT_5 :=
-\( \
-	\( The_Great_Reaper-$(DENSITY).png \( -clone -1 -fx 1 \) +append \) \
-	\( -clone -1 -fx 1 \) \
-	-append \
-\)
-endef
-
-PAGEDEPS_6 := Provincial_Militia Bowmen Ghosts Priest Citizen Bonesetter
-define PAGEFMT_6 :=
-\( \
-	\( Provincial_Militia-$(DENSITY).png \( +clone \) Bowmen-C-$(DENSITY).png \( +clone \) -rotate 90 -append \) \
-	\( Ghosts-$(DENSITY).png Priest-$(DENSITY).png Citizen-C-$(DENSITY).png Bonesetter-$(DENSITY).png -rotate 90 -append \) \
-	+append \
-\)
-endef
-
-PAGEDEPS_7 := John_Fastolf-2H John_Fastolf-2U John_Chandos-1 John_of_Lancaster-2U
-define PAGEFMT_7 :=
-\( \
-	\( John_Fastolf-2H-$(DENSITY).png John_Fastolf-2U-$(DENSITY).png +append \) \
-	\( John_Chandos-1-$(DENSITY).png John_of_Lancaster-2U-$(DENSITY).png +append \) \
-	-append \
-\)
-endef
-
-PAGEDEPS_8 := John_de_la_Pole-1 John_de_la_Pole-2 Thomas_de_Scales-1 Thomas_de_Scales-2
-define PAGEFMT_8 :=
-\( \
-	\( John_de_la_Pole-1-$(DENSITY).png John_de_la_Pole-2-$(DENSITY).png +append \) \
-	\( Thomas_de_Scales-1-$(DENSITY).png Thomas_de_Scales-2-$(DENSITY).png +append \) \
-	-append \
-\)
-endef
-
-PAGEDEPS_9 := Earl_of_Arundel-1 Earl_of_Arundel-2 Captal_de_Buch-1 Captal_de_Buch-2
-define PAGEFMT_9 :=
-\( \
-	\( Earl_of_Arundel-1-$(DENSITY).png Earl_of_Arundel-2-$(DENSITY).png +append \) \
-	\( Captal_de_Buch-1-$(DENSITY).png Captal_de_Buch-2-$(DENSITY).png +append \) \
-	-append \
-\)
-endef
-
-PAGEDEPS_10 := Edward_III-1 Edward_III-2 Ambroise_de_Lore-1 Ambroise_de_Lore-2
-define PAGEFMT_10 :=
-\( \
-	\( Edward_III-1-$(DENSITY).png Edward_III-2-$(DENSITY).png +append \) \
-	\( Ambroise_de_Lore-1-$(DENSITY).png Ambroise_de_Lore-2-$(DENSITY).png +append \) \
-	-append \
-\)
-endef
-
-PAGEDEPS_11 := Arthur_de_Richemont-1 Arthur_de_Richemont-2 Baudoin_de_Lens Charles_de_Bourbon-1
-define PAGEFMT_11 :=
-\( \
-	\( Arthur_de_Richemont-1-$(DENSITY).png Arthur_de_Richemont-2-$(DENSITY).png +append \) \
-	\( Baudoin_de_Lens-$(DENSITY).png Charles_de_Bourbon-1-$(DENSITY).png +append \) \
-	-append \
-\)
-endef
-
-PAGEDEPS_12 := Charles_de_Bourbon-2 Bertrand_du_Guesclin-2H Gilles_de_Rais-1 Gilles_de_Rais-2H
-define PAGEFMT_12 :=
-\( \
-	\( Charles_de_Bourbon-2-$(DENSITY).png Bertrand_du_Guesclin-2H-$(DENSITY).png +append \) \
-	\( Gilles_de_Rais-1-$(DENSITY).png Gilles_de_Rais-2H-$(DENSITY).png +append \) \
-	-append \
-\)
-endef
+include layouts/page-*
 
 ALL_PAGES := $(shell seq 1 $(NUM_PAGES))
 
 $(ALL_PAGES:%=page-%): page-%: page-%-$(DENSITY).pdf
 	touch $@
 
-page-%-$(DENSITY).pdf: $$(PAGEDEPS_%)
+page-%-$(DENSITY).pdf: layouts/page-% $$(PAGEDEPS_%)
 	convert -density $(DENSITY) -gravity Center \
 		$(PAGEFMT_$(@:page-%-$(DENSITY).pdf=%)) \
 		-extent $$(($(PAGEWIDTH)*$(DENSITY)*10/254))x$$(($(PAGEHEIGHT)*$(DENSITY)*10/254))! \
