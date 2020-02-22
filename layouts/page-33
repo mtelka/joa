@@ -1,9 +1,0 @@
-PAGEDEPS_33 := Peasants John_Stewart_of_Buchan-1 John_Stewart_of_Buchan-2
-define PAGEFMT_33 :=
-\( \
-	\( Peasants-C-$(DENSITY).png \( +clone \) -rotate 90 -append \) \
-	\( +clone -fx 1 \) +swap +append \
-	\( John_Stewart_of_Buchan-1-$(DENSITY).png John_Stewart_of_Buchan-2-$(DENSITY).png +append \) \
-	-append \
-\)
-endef

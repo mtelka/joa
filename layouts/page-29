@@ -1,7 +1,7 @@
-PAGEDEPS_29 := Assassin Vlad_Tepes-2
+PAGEDEPS_29 := Assassin
 define PAGEFMT_29 :=
 \( \
-	\( Assassin-$(DENSITY).png Vlad_Tepes-2-$(DENSITY).png +append \) \
+	\( Assassin-$(DENSITY).png \( +clone -fx 1 \) +append \) \
 	\( +clone -fx 1 \) \
 	-append \
 \)
