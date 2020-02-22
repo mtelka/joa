@@ -1,9 +1,0 @@
-PAGEDEPS_32 := Culverin
-define PAGEFMT_32 :=
-\( \
-	\( Culverin-S-$(DENSITY).png \( +clone \) Culverin-SE-$(DENSITY).png \( +clone -fx 1 \) -rotate 90 -append \) \
-	\( +clone -fx 1 \) \
-	+swap \
-	+append \
-\)
-endef

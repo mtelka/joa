@@ -1,6 +1,0 @@
-PAGEDEPS_29 :=
-define PAGEFMT_29 :=
-\( \
-	-size 1x1 xc:none \
-\)
-endef

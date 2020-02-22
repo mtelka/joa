@@ -1,6 +1,9 @@
-PAGEDEPS_28 :=
+PAGEDEPS_28 := Bowmen Peasants Citizen Apothecary Culverin
 define PAGEFMT_28 :=
 \( \
-	-size 1x1 xc:none \
+	\( Bowmen-B-$(DENSITY).png \( +clone \) Peasants-B-$(DENSITY).png \( +clone \) -rotate 90 -append \) \
+	\( Citizen-V-$(DENSITY).png Apothecary-V-$(DENSITY).png Culverin-S-$(DENSITY).png \( +clone \) -rotate 90 -append \) \
+	+swap \
+	+append \
 \)
 endef
