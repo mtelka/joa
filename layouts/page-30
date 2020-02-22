@@ -1,7 +1,7 @@
-PAGEDEPS_30 := Bowmen
+PAGEDEPS_30 := Bowmen Peasants
 define PAGEFMT_30 :=
 \( \
-	\( Bowmen-B-$(DENSITY).png \( +clone \) \( +clone -fx 1 \) \( +clone -fx 1 \) -rotate 90 -append \) \
+	\( Bowmen-B-$(DENSITY).png \( +clone \) Peasants-B-$(DENSITY).png \( +clone \) -rotate 90 -append \) \
 	\( +clone -fx 1 \) \
 	+append \
 \)

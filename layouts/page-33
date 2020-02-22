@@ -1,0 +1,8 @@
+PAGEDEPS_33 := Peasants
+define PAGEFMT_33 :=
+\( \
+	\( Peasants-C-$(DENSITY).png \( +clone \) \( +clone -fx 1 \) \( +clone -fx 1 \) -rotate 90 -append \) \
+	\( +clone -fx 1 \) \
+	+append \
+\)
+endef
