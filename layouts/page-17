@@ -1,0 +1,8 @@
+PAGEDEPS_17 := John_I_of_Luxembourg Charles_II_the_Magnanimous-1 Charles_II_the_Magnanimous-2 Boucicaut-1
+define PAGEFMT_17 :=
+\( \
+	\( John_I_of_Luxembourg-$(DENSITY).png Charles_II_the_Magnanimous-1-$(DENSITY).png +append \) \
+	\( Charles_II_the_Magnanimous-2-$(DENSITY).png Boucicaut-1-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

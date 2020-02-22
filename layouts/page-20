@@ -1,0 +1,8 @@
+PAGEDEPS_20 := Archangel_Gabriel-1 Archangel_Gabriel-2 Mounted_Hero_H-1 Mounted_Hero_E-1
+define PAGEFMT_20 :=
+\( \
+	\( Archangel_Gabriel-1-$(DENSITY).png Archangel_Gabriel-2-$(DENSITY).png +append \) \
+	\( Mounted_Hero_H-1-$(DENSITY).png Mounted_Hero_E-1-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

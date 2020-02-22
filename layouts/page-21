@@ -1,0 +1,8 @@
+PAGEDEPS_21 := Mounted_Hero_F-1 The_Tarasque-2 Saint_Martha-1 The_Courser
+define PAGEFMT_21 :=
+\( \
+	\( Mounted_Hero_F-1-$(DENSITY).png The_Tarasque-2-$(DENSITY).png +append \) \
+	\( Saint_Martha-1-$(DENSITY).png The_Courser-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

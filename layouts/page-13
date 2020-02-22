@@ -1,0 +1,8 @@
+PAGEDEPS_13 := Gilles_de_Rais-2U Jean_de_Dunois-2H Jean_de_Dunois-2U Jean_de_Vienne-1
+define PAGEFMT_13 :=
+\( \
+	\( Gilles_de_Rais-2U-$(DENSITY).png Jean_de_Dunois-2H-$(DENSITY).png +append \) \
+	\( Jean_de_Dunois-2U-$(DENSITY).png Jean_de_Vienne-1-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

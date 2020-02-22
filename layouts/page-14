@@ -1,0 +1,8 @@
+PAGEDEPS_14 := Jean_de_Vienne-2 Joan_of_Arc-1 Joan_of_Arc-2H Joan_of_Arc-2U
+define PAGEFMT_14 :=
+\( \
+	\( Jean_de_Vienne-2-$(DENSITY).png Joan_of_Arc-1-$(DENSITY).png +append \) \
+	\( Joan_of_Arc-2H-$(DENSITY).png Joan_of_Arc-2U-$(DENSITY).png +append \) \
+	-append \
+\)
+endef
