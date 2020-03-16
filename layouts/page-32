@@ -1,0 +1,8 @@
+PAGEDEPS_32 := Conquest-1
+define PAGEFMT_32 :=
+\( \
+	\( Conquest-1-$(DENSITY).png \( +clone -fx 1 \) +append \) \
+	\( +clone -fx 1 \) \
+	-append \
+\)
+endef

@@ -1,0 +1,8 @@
+PAGEDEPS_30 := Death-1 Archangel_Raphael-2 The_Holy_Relic Ark_of_the_Covenant
+define PAGEFMT_30 :=
+\( \
+	\( Death-1-$(DENSITY).png Archangel_Raphael-2-$(DENSITY).png +append \) \
+	\( The_Holy_Relic-$(DENSITY).png Ark_of_the_Covenant-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

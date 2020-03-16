@@ -1,0 +1,8 @@
+PAGEDEPS_31 := Judgement Triumph The_Lamb_of_God The_Antichrist
+define PAGEFMT_31 :=
+\( \
+	\( Judgement-$(DENSITY).png Triumph-$(DENSITY).png +append \) \
+	\( The_Lamb_of_God-$(DENSITY).png The_Antichrist-$(DENSITY).png +append \) \
+	-append \
+\)
+endef

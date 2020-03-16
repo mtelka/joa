@@ -1,0 +1,8 @@
+PAGEDEPS_29 := Armageddon-Unholy Horsemen-Holy Horsemen-Unholy Leviathan-Unholy
+define PAGEFMT_29 :=
+\( \
+	\( Armageddon-Unholy-$(DENSITY).png Leviathan-Unholy-$(DENSITY).png +append \) \
+	\( Horsemen-Holy-$(DENSITY).png Horsemen-Unholy-$(DENSITY).png +append \) \
+	-append \
+\)
+endef
