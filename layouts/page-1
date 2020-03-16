@@ -1,4 +1,5 @@
 PAGEDEPS_1 := Patay-French Executioner Jannisaries Targoviste-Mehmed Targoviste-Tepes
+PAGEBOXES_1 := $(shell printf "%s, %s" $(BOX_CORE) $(BOX_RELIQUARY))
 define PAGEFMT_1 :=
 \( \
 	\( Patay-French-$(DENSITY).png \( Executioner-$(DENSITY).png Jannisaries-$(DENSITY).png -rotate 90 -append \) +append \) \

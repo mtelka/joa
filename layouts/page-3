@@ -1,4 +1,5 @@
 PAGEDEPS_3 := Mehmed_II-1 Mehmed_II-2 John_Stewart_of_Darnley-1 John_Stewart_of_Darnley-2
+PAGEBOXES_3 := $(shell printf "%s" $(BOX_RELIQUARY))
 define PAGEFMT_3 :=
 \( \
 	\( Mehmed_II-1-$(DENSITY).png Mehmed_II-2-$(DENSITY).png +append \) \

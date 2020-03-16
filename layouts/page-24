@@ -1,4 +1,5 @@
 PAGEDEPS_24 := Voracious_Demons Apothecary Culverin Plague_Bearers Azab_Archers Arnaud_Amanieu_dAlbert Culverin
+PAGEBOXES_24 := $(shell printf "%s, %s" $(BOX_RELIQUARY) $(BOX_SIEGE_EQ))
 define PAGEFMT_24 :=
 \( \
 	\( Voracious_Demons-$(DENSITY).png Apothecary-R-$(DENSITY).png Culverin-R-$(DENSITY).png Plague_Bearers-$(DENSITY).png -rotate 90 -append \) \

@@ -1,4 +1,5 @@
 PAGEDEPS_8 := John_de_la_Pole-1 John_de_la_Pole-2 Gilles_de_Rais-2U Philippe_VI_de_Valois-1
+PAGEBOXES_8 := $(shell printf "%s" $(BOX_CORE))
 define PAGEFMT_8 :=
 \( \
 	\( John_de_la_Pole-1-$(DENSITY).png John_de_la_Pole-2-$(DENSITY).png +append \) \

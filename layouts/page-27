@@ -1,4 +1,5 @@
 PAGEDEPS_27 := John_Hawkwood Charles_de_Bourbon-2 Seguin_de_Badefol Dracula-1
+PAGEBOXES_27 := $(shell printf "%s, %s" $(BOX_CORE) $(BOX_RELIQUARY))
 define PAGEFMT_27 :=
 \( \
 	\( John_Hawkwood-$(DENSITY).png Charles_de_Bourbon-2-$(DENSITY).png +append \) \

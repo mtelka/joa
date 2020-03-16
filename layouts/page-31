@@ -1,4 +1,5 @@
 PAGEDEPS_31 := Judgement Triumph The_Lamb_of_God The_Antichrist
+PAGEBOXES_31 := $(shell printf "%s" $(BOX_APOCALYPSE))
 define PAGEFMT_31 :=
 \( \
 	\( Judgement-$(DENSITY).png Triumph-$(DENSITY).png +append \) \

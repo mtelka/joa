@@ -1,4 +1,5 @@
 PAGEDEPS_5 := Assassin William_Wallace-2H William_Wallace-2U
+PAGEBOXES_5 := $(shell printf "%s" $(BOX_RELIQUARY))
 define PAGEFMT_5 :=
 \( \
 	\( Assassin-$(DENSITY).png \( +clone \) +append \) \

@@ -1,4 +1,5 @@
 PAGEDEPS_15 := La_Hire-2H Gilles_de_Rais-1 Poton_de_Xaintrailles-1 Poton_de_Xaintrailles-2H
+PAGEBOXES_15 := $(shell printf "%s" $(BOX_CORE))
 define PAGEFMT_15 :=
 \( \
 	\( La_Hire-2H-$(DENSITY).png Gilles_de_Rais-1-$(DENSITY).png +append \) \

@@ -1,4 +1,5 @@
 PAGEDEPS_21 := Mounted_Hero_F-1 The_Tarasque-2 Charles_de_Bourbon-1 The_Courser
+PAGEBOXES_21 := $(shell printf "%s" $(BOX_CORE))
 define PAGEFMT_21 :=
 \( \
 	\( Mounted_Hero_F-1-$(DENSITY).png The_Tarasque-2-$(DENSITY).png +append \) \

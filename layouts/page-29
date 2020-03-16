@@ -1,4 +1,5 @@
 PAGEDEPS_29 := Armageddon-Unholy Horsemen-Holy Horsemen-Unholy Leviathan-Unholy
+PAGEBOXES_29 := $(shell printf "%s" $(BOX_APOCALYPSE))
 define PAGEFMT_29 :=
 \( \
 	\( Armageddon-Unholy-$(DENSITY).png Leviathan-Unholy-$(DENSITY).png +append \) \

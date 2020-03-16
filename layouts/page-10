@@ -1,4 +1,5 @@
 PAGEDEPS_10 := Edward_III-1 Amaury_de_Craon-1 Ambroise_de_Lore-1 Ambroise_de_Lore-2
+PAGEBOXES_10 := $(shell printf "%s" $(BOX_CORE))
 define PAGEFMT_10 :=
 \( \
 	\( Edward_III-1-$(DENSITY).png Amaury_de_Craon-1-$(DENSITY).png +append \) \

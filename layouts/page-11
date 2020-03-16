@@ -1,4 +1,5 @@
 PAGEDEPS_11 := John_Fastolf-2H Arthur_de_Richemont-2 The_Werewolf-1 Saint_Martha-1
+PAGEBOXES_11 := $(shell printf "%s" $(BOX_CORE))
 define PAGEFMT_11 :=
 \( \
 	\( John_Fastolf-2H-$(DENSITY).png Arthur_de_Richemont-2-$(DENSITY).png +append \) \

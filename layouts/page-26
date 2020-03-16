@@ -1,4 +1,5 @@
 PAGEDEPS_26 := John_II_of_Luxembourg-2 William_Wallace-1 Radu_III_The_Handsome-2 The_Griffin
+PAGEBOXES_26 := $(shell printf "%s" $(BOX_RELIQUARY))
 define PAGEFMT_26 :=
 \( \
 	\( John_II_of_Luxembourg-2-$(DENSITY).png William_Wallace-1-$(DENSITY).png +append \) \

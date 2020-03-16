@@ -1,4 +1,5 @@
 PAGEDEPS_12 := Robert_Knolles Captal_de_Buch-2 La_Hire-2U Edward_III-2
+PAGEBOXES_12 := $(shell printf "%s, %s" $(BOX_CORE) $(BOX_RELIQUARY))
 define PAGEFMT_12 :=
 \( \
 	\( Robert_Knolles-$(DENSITY).png Captal_de_Buch-2-$(DENSITY).png +append \) \

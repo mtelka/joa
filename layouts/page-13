@@ -1,4 +1,5 @@
 PAGEDEPS_13 := Thomas_de_Scales-1 Jean_de_Dunois-2H Jean_de_Dunois-2U Jean_de_Vienne-1
+PAGEBOXES_13 := $(shell printf "%s" $(BOX_CORE))
 define PAGEFMT_13 :=
 \( \
 	\( Thomas_de_Scales-1-$(DENSITY).png Jean_de_Dunois-2H-$(DENSITY).png +append \) \

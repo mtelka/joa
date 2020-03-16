@@ -1,4 +1,5 @@
 PAGEDEPS_7 := Arthur_de_Richemont-1 John_Fastolf-2H John_Fastolf-2U John_Chandos-1 John_of_Lancaster-2U
+PAGEBOXES_7 := $(shell printf "%s" $(BOX_CORE))
 define PAGEFMT_7 :=
 \( \
 	\( Arthur_de_Richemont-1-$(DENSITY).png John_Fastolf-2U-$(DENSITY).png +append \) \

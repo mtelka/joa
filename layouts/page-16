@@ -1,4 +1,5 @@
 PAGEDEPS_16 := Poton_de_Xaintrailles-2U Thomas_de_Scales-2 Philippe_VI_de_Valois-2H Philippe_VI_de_Valois-2U
+PAGEBOXES_16 := $(shell printf "%s" $(BOX_CORE))
 define PAGEFMT_16 :=
 \( \
 	\( Poton_de_Xaintrailles-2U-$(DENSITY).png Thomas_de_Scales-2-$(DENSITY).png +append \) \

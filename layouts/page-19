@@ -1,4 +1,5 @@
 PAGEDEPS_19 := Philippe_the_Bold Baudoin_de_Lens The_Witch-1 The_Witch-2
+PAGEBOXES_19 := $(shell printf "%s" $(BOX_CORE))
 define PAGEFMT_19 :=
 \( \
 	\( Philippe_the_Bold-$(DENSITY).png Baudoin_de_Lens-$(DENSITY).png +append \) \

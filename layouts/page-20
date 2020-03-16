@@ -1,4 +1,5 @@
 PAGEDEPS_20 := Archangel_Gabriel-1 Archangel_Gabriel-2 Mounted_Hero_H-1 Mounted_Hero_E-1
+PAGEBOXES_20 := $(shell printf "%s" $(BOX_CORE))
 define PAGEFMT_20 :=
 \( \
 	\( Archangel_Gabriel-1-$(DENSITY).png Archangel_Gabriel-2-$(DENSITY).png +append \) \

@@ -1,4 +1,5 @@
 PAGEDEPS_6 := Provincial_Militia Bowmen Ghosts Priest Citizen Bonesetter
+PAGEBOXES_6 := $(shell printf "%s" $(BOX_CORE))
 define PAGEFMT_6 :=
 \( \
 	\( Provincial_Militia-$(DENSITY).png \( +clone \) Bowmen-C-$(DENSITY).png \( +clone \) -rotate 90 -append \) \

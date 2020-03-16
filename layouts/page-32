@@ -1,4 +1,5 @@
 PAGEDEPS_32 := Conquest-1
+PAGEBOXES_32 := $(shell printf "%s" $(BOX_APOCALYPSE))
 define PAGEFMT_32 :=
 \( \
 	\( Conquest-1-$(DENSITY).png \( +clone -fx 1 \) +append \) \

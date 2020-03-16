@@ -892,7 +892,7 @@ page-%-$(DENSITY).pdf: params/font params/page layouts/page-% $$(PAGEDEPS_%)
 		\( \
 			-size $$(($(PAGEHEIGHT)*$(DENSITY)*10/254))x$$(($(DENSITY)*$(MINBORDER)*10/254)) xc:none \
 			-font $(FONT) -pointsize $(FONTSIZE) \
-			-draw "gravity North ; text 0,0 'Joan of Arc: Updated Cards v$(VERSION) - $(DENSITY) DPI (page $(@:page-%-$(DENSITY).pdf=%) of $(NUM_PAGES))'" \
+			-draw "gravity North ; text 0,0 'Joan of Arc: Updated Cards v$(VERSION) - $(DENSITY) DPI (page $(@:page-%-$(DENSITY).pdf=%) of $(NUM_PAGES)) - $(PAGEBOXES_$(@:page-%-$(DENSITY).pdf=%))'" \
 			-rotate 90 \
 		\) \
 		-gravity East \

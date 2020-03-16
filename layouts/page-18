@@ -1,4 +1,5 @@
 PAGEDEPS_18 := Boucicaut-2 Gilles_de_Rais-2H Erwan_de_Romorantin-1 Erwan_de_Romorantin-2
+PAGEBOXES_18 := $(shell printf "%s" $(BOX_CORE))
 define PAGEFMT_18 :=
 \( \
 	\( Boucicaut-2-$(DENSITY).png Gilles_de_Rais-2H-$(DENSITY).png +append \) \

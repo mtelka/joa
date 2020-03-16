@@ -1,4 +1,5 @@
 PAGEDEPS_2 := Merchant_Girl Mounted_Bowmen Vlad_Tepes-1 The_Great_Reaper
+PAGEBOXES_2 := $(shell printf "%s, %s, %s" $(BOX_CORE) $(BOX_RELIQUARY) $(BOX_VILLAGE))
 define PAGEFMT_2 :=
 \( \
 	\( Merchant_Girl-C-$(DENSITY).png Merchant_Girl-V-$(DENSITY).png Mounted_Bowmen-$(DENSITY).png \( +clone \) -rotate 90 -append \) \

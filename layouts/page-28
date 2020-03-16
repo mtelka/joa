@@ -1,4 +1,5 @@
 PAGEDEPS_28 := Bowmen Peasants Citizen Apothecary Culverin
+PAGEBOXES_28 := $(shell printf "%s, %s, %s" $(BOX_BATTLES) $(BOX_SIEGE) $(BOX_VILLAGE))
 define PAGEFMT_28 :=
 \( \
 	\( Bowmen-B-$(DENSITY).png \( +clone \) Peasants-B-$(DENSITY).png \( +clone \) -rotate 90 -append \) \

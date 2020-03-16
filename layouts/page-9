@@ -1,4 +1,5 @@
 PAGEDEPS_9 := Earl_of_Arundel-1 Earl_of_Arundel-2 Captal_de_Buch-1 Bertrand_du_Guesclin-2H
+PAGEBOXES_9 := $(shell printf "%s" $(BOX_CORE))
 define PAGEFMT_9 :=
 \( \
 	\( Earl_of_Arundel-1-$(DENSITY).png Earl_of_Arundel-2-$(DENSITY).png +append \) \
