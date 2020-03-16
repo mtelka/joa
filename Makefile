@@ -148,7 +148,10 @@ $(INTRIGUE):	W := 70
 $(INTRIGUE):	H := 120
 
 
-all: Joan_of_Arc_-_Updated_Cards_-_v$(VERSION)-$(DENSITY)dpi.pdf
+all:
+	$(MAKE) DENSITY=300 -j8 Joan_of_Arc_-_Updated_Cards_-_v$(VERSION)-300dpi.pdf
+	$(MAKE) DENSITY=600 -j8 Joan_of_Arc_-_Updated_Cards_-_v$(VERSION)-600dpi.pdf
+	$(MAKE) DENSITY=1200 -j8 Joan_of_Arc_-_Updated_Cards_-_v$(VERSION)-1200dpi.pdf
 
 
 TROOP_PDF_1 := JoA\ -\ CORE\ -\ TROOP\ -\ ENG\ -\ FINAL_1.5.pdf
