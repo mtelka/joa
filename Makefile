@@ -23,6 +23,7 @@ ANNOTATE_NOTE = $$(($$VCUT+$(DENSITY)*$(ANNOTATE_SPACE)*10/254)),0
 
 BOX_CORE	:= 'Core Box'
 BOX_RELIQUARY	:= 'Reliquary'
+BOX_APOCALYPSE	:= 'Apocalypse'
 BOX_BATTLES	:= 'Legendary Battles'
 BOX_SIEGE	:= 'Siege'
 BOX_SIEGE_EQ	:= 'Siege Equipment'
@@ -70,6 +71,8 @@ CHARACTERS := \
 	Amaury_de_Craon-1 \
 	Ambroise_de_Lore-1 Ambroise_de_Lore-2 \
 	Archangel_Gabriel-1 Archangel_Gabriel-2 \
+	Archangel_Raphael-2 \
+	Ark_of_the_Covenant \
 	Arnaud_Amanieu_dAlbert \
 	Arthur_de_Richemont-1 Arthur_de_Richemont-2 \
 	Assassin \
@@ -79,6 +82,8 @@ CHARACTERS := \
 	Captal_de_Buch-1 Captal_de_Buch-2 \
 	Charles_de_Bourbon-1 Charles_de_Bourbon-2 \
 	Charles_II_the_Magnanimous-1 Charles_II_the_Magnanimous-2 \
+	Conquest-1 \
+	Death-1 \
 	Dracula-1 \
 	Earl_of_Arundel-1 Earl_of_Arundel-2 \
 	Edward_III-1 Edward_III-2 \
@@ -97,6 +102,7 @@ CHARACTERS := \
 	John_of_Lancaster-2U \
 	John_Stewart_of_Buchan-1 John_Stewart_of_Buchan-2 \
 	John_Stewart_of_Darnley-1 John_Stewart_of_Darnley-2 \
+	Judgement \
 	La_Hire-2H La_Hire-2U \
 	Mehmed_II-1 Mehmed_II-2 \
 	Mounted_Hero_E-1 \
@@ -110,13 +116,17 @@ CHARACTERS := \
 	Robert_Knolles \
 	Saint_Martha-1 \
 	Seguin_de_Badefol \
+	The_Antichrist \
 	The_Courser \
 	The_Great_Reaper \
 	The_Griffin \
+	The_Holy_Relic \
+	The_Lamb_of_God \
 	The_Tarasque-2 \
 	The_Werewolf-1 \
 	The_Witch-1 The_Witch-2 \
 	Thomas_de_Scales-1 Thomas_de_Scales-2 \
+	Triumph \
 	Vlad_Tepes-1 Vlad_Tepes-2 \
 	William_Wallace-1 William_Wallace-2H William_Wallace-2U
 
@@ -125,6 +135,10 @@ $(CHARACTERS):	W := 70
 $(CHARACTERS):	H := 120
 
 INTRIGUE := \
+	Armageddon-Unholy \
+	Horsemen-Holy \
+	Horsemen-Unholy \
+	Leviathan-Unholy \
 	Patay-French \
 	Targoviste-Mehmed \
 	Targoviste-Tepes
@@ -163,6 +177,14 @@ INTRIGUE_PDF_1_NOTE := 'KS 1.0 Update \#192'
 INTRIGUE_PDF_2 := JoA\ -\ Vlad\ Tepes\ in\ Targoviste\ -\ Revised\ Intrigue\ -\ ENG.pdf
 INTRIGUE_PDF_2_DATE := 2019-10-30
 INTRIGUE_PDF_2_NOTE := 'KS 1.0 Update \#208'
+
+APOCALYPSE_PDF_1 := APOCALYPSE_TAROT_Cards_\ Front_ENG.pdf
+APOCALYPSE_PDF_1_DATE := 2020-03-11
+APOCALYPSE_PDF_1_NOTE := 'KS 1.0 Update \#229'
+
+APOCALYPSE_PDF_2 := APOCALYPSE_TAROT_Cards_BACK_ENG.pdf
+APOCALYPSE_PDF_2_DATE := 2020-03-11
+APOCALYPSE_PDF_2_NOTE := 'KS 1.0 Update \#229'
 
 # Troops
 
@@ -322,6 +344,14 @@ Archangel_Gabriel-2_PDF := CHARACTER_PDF_2
 Archangel_Gabriel-2_PAGE := 57
 Archangel_Gabriel-2_BOX := $(BOX_CORE)
 
+Archangel_Raphael-2_PDF := APOCALYPSE_PDF_2
+Archangel_Raphael-2_PAGE := 5
+Archangel_Raphael-2_BOX := $(BOX_APOCALYPSE)
+
+Ark_of_the_Covenant_PDF := APOCALYPSE_PDF_1
+Ark_of_the_Covenant_PAGE := 7
+Ark_of_the_Covenant_BOX := $(BOX_APOCALYPSE)
+
 Arnaud_Amanieu_dAlbert_PDF := CHARACTER_PDF_3
 Arnaud_Amanieu_dAlbert_PAGE := 25
 Arnaud_Amanieu_dAlbert_BOX := $(BOX_RELIQUARY)
@@ -377,6 +407,14 @@ Charles_II_the_Magnanimous-1_BOX := $(BOX_CORE)
 Charles_II_the_Magnanimous-2_PDF := CHARACTER_PDF_2
 Charles_II_the_Magnanimous-2_PAGE := 45
 Charles_II_the_Magnanimous-2_BOX := $(BOX_CORE)
+
+Conquest-1_PDF := APOCALYPSE_PDF_1
+Conquest-1_PAGE := 1
+Conquest-1_BOX := $(BOX_APOCALYPSE)
+
+Death-1_PDF := APOCALYPSE_PDF_1
+Death-1_PAGE := 2
+Death-1_BOX := $(BOX_APOCALYPSE)
 
 Dracula-1_PDF := CHARACTER_PDF_3
 Dracula-1_PAGE := 16
@@ -502,6 +540,10 @@ John_Stewart_of_Darnley-2_PDF := CHARACTER_PDF_4
 John_Stewart_of_Darnley-2_PAGE := 10
 John_Stewart_of_Darnley-2_BOX := $(BOX_RELIQUARY)
 
+Judgement_PDF := APOCALYPSE_PDF_1
+Judgement_PAGE := 8
+Judgement_BOX := $(BOX_APOCALYPSE)
+
 La_Hire-2H_PDF := CHARACTER_PDF_1
 La_Hire-2H_PAGE := 37
 La_Hire-2H_BOX := $(BOX_CORE)
@@ -586,6 +628,10 @@ Seguin_de_Badefol_PDF := CHARACTER_PDF_3
 Seguin_de_Badefol_PAGE := 13
 Seguin_de_Badefol_BOX := $(BOX_RELIQUARY)
 
+The_Antichrist_PDF := APOCALYPSE_PDF_1
+The_Antichrist_PAGE := 12
+The_Antichrist_BOX := $(BOX_APOCALYPSE)
+
 The_Courser_PDF := CHARACTER_PDF_1
 The_Courser_PAGE := 72
 The_Courser_BOX := $(BOX_CORE)
@@ -597,6 +643,14 @@ The_Great_Reaper_BOX := $(BOX_RELIQUARY)
 The_Griffin_PDF := CHARACTER_PDF_3
 The_Griffin_PAGE := 22
 The_Griffin_BOX := $(BOX_RELIQUARY)
+
+The_Holy_Relic_PDF := APOCALYPSE_PDF_1
+The_Holy_Relic_PAGE := 6
+The_Holy_Relic_BOX := $(BOX_APOCALYPSE)
+
+The_Lamb_of_God_PDF := APOCALYPSE_PDF_1
+The_Lamb_of_God_PAGE := 10
+The_Lamb_of_God_BOX := $(BOX_APOCALYPSE)
 
 The_Tarasque-2_PDF := CHARACTER_PDF_2
 The_Tarasque-2_PAGE := 66
@@ -622,6 +676,10 @@ Thomas_de_Scales-2_PDF := CHARACTER_PDF_2
 Thomas_de_Scales-2_PAGE := 14
 Thomas_de_Scales-2_BOX := $(BOX_CORE)
 
+Triumph_PDF := APOCALYPSE_PDF_1
+Triumph_PAGE := 9
+Triumph_BOX := $(BOX_APOCALYPSE)
+
 Vlad_Tepes-1_PDF := CHARACTER_PDF_3
 Vlad_Tepes-1_PAGE := 15
 Vlad_Tepes-1_BOX := $(BOX_RELIQUARY)
@@ -643,6 +701,22 @@ William_Wallace-2U_PAGE := 9
 William_Wallace-2U_BOX := $(BOX_RELIQUARY)
 
 # Intrigue
+
+Armageddon-Unholy_PDF := APOCALYPSE_PDF_2
+Armageddon-Unholy_PAGE := 9
+Armageddon-Unholy_BOX := $(BOX_APOCALYPSE)
+
+Horsemen-Holy_PDF := APOCALYPSE_PDF_2
+Horsemen-Holy_PAGE := 10
+Horsemen-Holy_BOX := $(BOX_APOCALYPSE)
+
+Horsemen-Unholy_PDF := APOCALYPSE_PDF_2
+Horsemen-Unholy_PAGE := 11
+Horsemen-Unholy_BOX := $(BOX_APOCALYPSE)
+
+Leviathan-Unholy_PDF := APOCALYPSE_PDF_2
+Leviathan-Unholy_PAGE := 13
+Leviathan-Unholy_BOX := $(BOX_APOCALYPSE)
 
 Patay-French_PDF := INTRIGUE_PDF_1
 Patay-French_PAGE := 1
