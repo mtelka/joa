@@ -1,0 +1,11 @@
+PAGEDEPS_35 := Bombard
+PAGEBOXES_35 := $(shell printf "%s" $(BOX_DRAGON))
+define PAGEFMT_35 :=
+\( \
+	\( Bombard-D-$(DENSITY).png \( +clone -fx 1 \) -rotate 90 -append \) \
+	\( +clone -fx 1 \) -append \
+	\( +clone -fx 1 \) \
+	+swap \
+	+append \
+\)
+endef

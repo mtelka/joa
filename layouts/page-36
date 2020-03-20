@@ -1,0 +1,10 @@
+PAGEDEPS_36 := M05 M13 M19 M24 M26 T02 T04 T07 T15 T20
+PAGEBOXES_36 := $(shell printf "%s" $(BOX_CORE))
+define PAGEFMT_36 :=
+\( \
+	\( M05-$(DENSITY).png M13-$(DENSITY).png M19-$(DENSITY).png M24-$(DENSITY).png M26-$(DENSITY).png -rotate 90 -append \) \
+	\( T02-$(DENSITY).png T04-$(DENSITY).png T07-$(DENSITY).png T15-$(DENSITY).png T20-$(DENSITY).png -rotate 90 -append \) \
+	+swap \
+	+append \
+\)
+endef

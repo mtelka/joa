@@ -1,0 +1,10 @@
+PAGEDEPS_33 := Bombard Ballista Trebuchet Battering_Ram Siege_Tower
+PAGEBOXES_33 := $(shell printf "%s" $(BOX_SIEGE))
+define PAGEFMT_33 :=
+\( \
+	\( Bombard-S-$(DENSITY).png \( +clone \) Ballista-S-$(DENSITY).png \( +clone \) -rotate 90 -append \) \
+	\( Trebuchet-S-$(DENSITY).png \( +clone \) Battering_Ram-S-$(DENSITY).png Siege_Tower-$(DENSITY).png -rotate 90 -append \) \
+	+swap \
+	+append \
+\)
+endef

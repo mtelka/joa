@@ -1,0 +1,10 @@
+PAGEDEPS_37 := T22 T24 T26
+PAGEBOXES_37 := $(shell printf "%s" $(BOX_CORE))
+define PAGEFMT_37 :=
+\( \
+	\( T22-$(DENSITY).png T24-$(DENSITY).png T26-$(DENSITY).png \( +clone -fx 1 \) \( +clone -fx 1 \) -rotate 90 -append \) \
+	\( +clone -fx 1 \) \
+	+swap \
+	+append \
+\)
+endef
