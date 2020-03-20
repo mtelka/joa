@@ -25,6 +25,7 @@ BOX_CORE	:= 'Core Box'
 BOX_RELIQUARY	:= 'Reliquary'
 BOX_APOCALYPSE	:= 'Apocalypse'
 BOX_BATTLES	:= 'Legendary Battles'
+BOX_DRAGON	:= 'Legendary Dragon'
 BOX_SIEGE	:= 'Siege'
 BOX_SIEGE_EQ	:= 'Siege Equipment'
 BOX_VILLAGE	:= 'Village Pack'
@@ -32,6 +33,9 @@ BOX_VILLAGE	:= 'Village Pack'
 TROOPS := \
 	Apothecary \
 	Azab_Archers \
+	Ballista \
+	Battering_Ram \
+	Bombard \
 	Bonesetter \
 	Bowmen \
 	Bowmen_-_Short_Bow \
@@ -59,7 +63,9 @@ TROOPS := \
 	Priest \
 	Provincial_Militia \
 	Scottish_Pikemen \
+	Siege_Tower \
 	Support_Infantry \
+	Trebuchet \
 	Voracious_Demons \
 	Voulgiers
 
@@ -147,6 +153,25 @@ INTRIGUE := \
 $(INTRIGUE):	W := 70
 $(INTRIGUE):	H := 120
 
+LEGEND := \
+	M05 \
+	M13 \
+	M19 \
+	M24 \
+	M26 \
+	T02 \
+	T04 \
+	T07 \
+	T15 \
+	T20 \
+	T22 \
+	T24 \
+	T26
+
+# 44 x 67 mm
+$(LEGEND):	W := 44
+$(LEGEND):	H := 67
+
 
 all:
 	$(MAKE) DENSITY=300 -j8 Joan_of_Arc_-_Updated_Cards_-_v$(VERSION)-300dpi.pdf
@@ -160,6 +185,9 @@ TROOP_PDF_1_NOTE := 'KS 1.0 Update \#227'
 TROOP_PDF_2 := JoA\ -\ Reliquary\ -\ Poker\ Cards\ -\ Troops\ -\ Front\ -\ ENG_1.5.pdf
 TROOP_PDF_2_DATE := 2020-02-17
 TROOP_PDF_2_NOTE := 'KS 1.0 Update \#227'
+TROOP_PDF_3 := SIEGE_Poker_Cards_Front_v1.5\ ENG.pdf
+TROOP_PDF_3_DATE := 2020-03-17
+TROOP_PDF_3_NOTE := 'KS 1.0 Update \#230'
 
 CHARACTER_PDF_1 := JoA\ -\ CORE\ -\ Tarot\ Cards_Characters\ -\ FRONT\ -\ ENG_1.5.pdf
 CHARACTER_PDF_1_DATE := 2020-02-17
@@ -184,10 +212,13 @@ INTRIGUE_PDF_2_NOTE := 'KS 1.0 Update \#208'
 APOCALYPSE_PDF_1 := APOCALYPSE_TAROT_Cards_\ Front_ENG.pdf
 APOCALYPSE_PDF_1_DATE := 2020-03-11
 APOCALYPSE_PDF_1_NOTE := 'KS 1.0 Update \#229'
-
 APOCALYPSE_PDF_2 := APOCALYPSE_TAROT_Cards_BACK_ENG.pdf
 APOCALYPSE_PDF_2_DATE := 2020-03-11
 APOCALYPSE_PDF_2_NOTE := 'KS 1.0 Update \#229'
+
+LEGEND_PDF := JoA-Core-Minipoker\ Cards\ -\ Front\ -\ ENG_v1.5.pdf
+LEGEND_PDF_DATE := 2020-03-17
+LEGEND_PDF_NOTE := 'KS 1.0 Update \#230'
 
 # Troops
 
@@ -199,6 +230,21 @@ Apothecary:	Apothecary-R Apothecary-V
 Azab_Archers_PDF := TROOP_PDF_2
 Azab_Archers_PAGE := 42
 Azab_Archers_BOX := $(BOX_RELIQUARY)
+
+Ballista_PDF := TROOP_PDF_3
+Ballista_PAGE := 9
+Ballista_BOX := ''
+Ballista:	Ballista-S Ballista-SE
+
+Battering_Ram_PDF := TROOP_PDF_3
+Battering_Ram_PAGE := 15
+Battering_Ram_BOX := ''
+Battering_Ram:	Battering_Ram-S Battering_Ram-SE
+
+Bombard_PDF := TROOP_PDF_3
+Bombard_PAGE := 5
+Bombard_BOX := ''
+Bombard:	Bombard-D Bombard-S Bombard-SE
 
 Bonesetter_PDF := TROOP_PDF_1
 Bonesetter_PAGE := 30
@@ -218,8 +264,8 @@ Citizen_PAGE := 29
 Citizen_BOX := ''
 Citizen:	Citizen-C Citizen-V
 
-Culverin_PDF := TROOP_PDF_2
-Culverin_PAGE := 34
+Culverin_PDF := TROOP_PDF_3
+Culverin_PAGE := 7
 Culverin_BOX := ''
 Culverin:	Culverin-R Culverin-S Culverin-SE
 
@@ -313,9 +359,18 @@ Scottish_Pikemen_PDF := TROOP_PDF_2
 Scottish_Pikemen_PAGE := 6
 Scottish_Pikemen_BOX := $(BOX_RELIQUARY)
 
+Siege_Tower_PDF := TROOP_PDF_3
+Siege_Tower_PAGE := 16
+Siege_Tower_BOX := $(BOX_SIEGE)
+
 Support_Infantry_PDF := TROOP_PDF_2
 Support_Infantry_PAGE := 13
 Support_Infantry_BOX := $(BOX_RELIQUARY)
+
+Trebuchet_PDF := TROOP_PDF_3
+Trebuchet_PAGE := 11
+Trebuchet_BOX := ''
+Trebuchet:	Trebuchet-S Trebuchet-SE
 
 Voracious_Demons_PDF := TROOP_PDF_2
 Voracious_Demons_PAGE := 32
@@ -733,9 +788,70 @@ Targoviste-Tepes_PDF := INTRIGUE_PDF_2
 Targoviste-Tepes_PAGE := 2
 Targoviste-Tepes_BOX := $(BOX_RELIQUARY)
 
+# Legend
 
-ALL_CARDS := $(TROOPS) $(CHARACTERS) $(INTRIGUE)
-ALL_CARDS_BOX := $(ALL_CARDS:=-C) $(ALL_CARDS:=-R) $(ALL_CARDS:=-B) $(ALL_CARDS:=-S) $(ALL_CARDS:=-SE) $(ALL_CARDS:=-V)
+M05_PDF := LEGEND_PDF
+M05_PAGE := 5
+M05_BOX := $(BOX_CORE)
+
+M13_PDF := LEGEND_PDF
+M13_PAGE := 13
+M13_BOX := $(BOX_CORE)
+
+M19_PDF := LEGEND_PDF
+M19_PAGE := 19
+M19_BOX := $(BOX_CORE)
+
+M24_PDF := LEGEND_PDF
+M24_PAGE := 24
+M24_BOX := $(BOX_CORE)
+
+M26_PDF := LEGEND_PDF
+M26_PAGE := 26
+M26_BOX := $(BOX_CORE)
+
+T02_PDF := LEGEND_PDF
+T02_PAGE := 28
+T02_BOX := $(BOX_CORE)
+
+T04_PDF := LEGEND_PDF
+T04_PAGE := 30
+T04_BOX := $(BOX_CORE)
+
+T07_PDF := LEGEND_PDF
+T07_PAGE := 33
+T07_BOX := $(BOX_CORE)
+
+T15_PDF := LEGEND_PDF
+T15_PAGE := 41
+T15_BOX := $(BOX_CORE)
+
+T20_PDF := LEGEND_PDF
+T20_PAGE := 46
+T20_BOX := $(BOX_CORE)
+
+T22_PDF := LEGEND_PDF
+T22_PAGE := 48
+T22_BOX := $(BOX_CORE)
+
+T24_PDF := LEGEND_PDF
+T24_PAGE := 50
+T24_BOX := $(BOX_CORE)
+
+T26_PDF := LEGEND_PDF
+T26_PAGE := 52
+T26_BOX := $(BOX_CORE)
+
+
+ALL_CARDS := $(TROOPS) $(CHARACTERS) $(INTRIGUE) $(LEGEND)
+ALL_CARDS_BOX := \
+	$(ALL_CARDS:=-C) \
+	$(ALL_CARDS:=-R) \
+	$(ALL_CARDS:=-B) \
+	$(ALL_CARDS:=-D) \
+	$(ALL_CARDS:=-S) \
+	$(ALL_CARDS:=-SE) \
+	$(ALL_CARDS:=-V)
 
 $(ALL_CARDS) $(ALL_CARDS_BOX): %: %-$(DENSITY).png
 	touch $@
@@ -848,6 +964,16 @@ $(ALL_CARDS:=-$(DENSITY).png): %-$(DENSITY).png: %.pdf %-$(DENSITY).dim params/f
 		\( \
 			-size $$(($$W+2*$$HBORDER))x$$(($(DENSITY)*$(MINBORDER)*10/254)) xc:none \
 			-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $(BOX_BATTLES)" \
+		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
+		$@
+
+%-D-$(DENSITY).png: %-$(DENSITY).png %-$(DENSITY).dim params/font
+	. ./$(@:-D-$(DENSITY).png=-$(DENSITY).dim) ; \
+	convert -density $(DENSITY) $< \
+		-font $(FONT) -pointsize $(FONTSIZE) \
+		\( \
+			-size $$(($$W+2*$$HBORDER))x$$(($(DENSITY)*$(MINBORDER)*10/254)) xc:none \
+			-draw "gravity NorthWest ; text $(ANNOTATE_BOX) $(BOX_DRAGON)" \
 		\) -geometry +0+$$((VBORDER-$(DENSITY)*$(MINBORDER)*10/254)) -composite \
 		$@
 
